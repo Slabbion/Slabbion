@@ -150,41 +150,107 @@
         </div>
     </section>
 
+    <!-- Slabbion Architectural Systems Section -->
+    <section id="eco-design" class="container py-5">
+        <h2 class="text-center mb-5 section-title glow-teal">🏗️ Slabbion Architectural Systems</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-    <!-- Eco-Tech Design Overview -->
-    <section id="eco-design" class="py-5" style="background-color: #112; color: #fff;">
-        <div class="container">
-            <h2 class="text-center mb-4 section-title" style="color: #32CD32; text-shadow: 0 0 10px #32CD32;">🏗️ Slabbion Architectural Systems</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 text-center mt-4">
-
-                <!-- Smart Grid Homes -->
-                <div class="col">
-                    <div class="p-4 border border-success rounded-4 bg-dark shadow-sm h-100">
-                        <i class="fas fa-home fa-2x mb-3 text-success glow-icon"></i>
-                        <h5 class="fw-bold text-success">Smart Grid Homes</h5>
-                        <p>Zero-emission residences powered by solar arrays and battery walls. Integrated AI regulates power and climate for max efficiency.</p>
+            <!-- Smart Grid Homes -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4 text-center">
+                    <div class="card-body p-4">
+                    <h4 class="mb-3" style="color: #228B22;">Smart Grid Homes</h4>
+                    <p>Zero-emission residences powered by solar arrays and battery walls. Integrated AI regulates power and climate for max efficiency.</p>
+                    <button type="button" class="btn btn-outline-forest mt-3" data-bs-toggle="modal" data-bs-target="#modalSmartGrid">Browse Images</button>
                     </div>
                 </div>
-
-                <!-- Vertical Eco Towers -->
-                <div class="col">
-                    <div class="p-4 border border-success rounded-4 bg-dark shadow-sm h-100">
-                        <i class="fas fa-city fa-2x mb-3 text-success glow-icon"></i>
-                        <h5 class="fw-bold text-success">Vertical Eco Towers</h5>
-                        <p>Skyscrapers with living walls, rain capture systems, and adaptive solar glazing—built for dense, green urbanism.</p>
-                    </div>
-                </div>
-
-                <!-- Modular Habitat Nodes -->
-                <div class="col">
-                    <div class="p-4 border border-success rounded-4 bg-dark shadow-sm h-100">
-                        <i class="fas fa-cube fa-2x mb-3 text-success glow-icon"></i>
-                        <h5 class="fw-bold text-success">Modular Habitat Nodes</h5>
-                        <p>Quick-deploy shelters for off-grid living, disaster response, or space base prototypes. Lightweight, resilient, and stackable.</p>
-                    </div>
-                </div>
-
             </div>
+
+            <!-- Modal Smart Grid Homes -->
+            <div class="modal fade" id="modalSmartGrid" tabindex="-1" aria-labelledby="modalSmartGridLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalSmartGridLabel">Smart Grid Homes</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-wrap gap-3 justify-content-center">
+                        <img src="images/Architecture/SmartGrid_1.jpg" class="img-fluid rounded modal-image" />
+                        <img src="images/Architecture/SmartGrid_2.jpg" class="img-fluid rounded modal-image" />
+                        <img src="images/Architecture/SmartGrid_3.jpg" class="img-fluid rounded modal-image" />
+                    </div>
+                    <div class="modal-footer">
+                        <p class="text-muted">Click images to view in large mode</p>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vertical Eco Towers -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4 text-center">
+                    <div class="card-body p-4">
+                    <h4 class="mb-3" style="color: #228B22;">Vertical Eco Towers</h4>
+                    <p>Skyscrapers with living walls, rain capture systems, and adaptive solar glazing—built for dense, green urbanism.</p>
+                    <button type="button" class="btn btn-outline-forest mt-3" data-bs-toggle="modal" data-bs-target="#modalEcoTowers">Browse Images</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Vertical Eco Towers -->
+            <div class="modal fade" id="modalEcoTowers" tabindex="-1" aria-labelledby="modalEcoTowersLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalEcoTowersLabel">Vertical Eco Towers</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-wrap gap-3 justify-content-center">
+                        <img src="images/Architecture/EcoTowers_1.jpg" class="img-fluid rounded modal-image" />
+                        <img src="images/Architecture/EcoTowers_2.jpg" class="img-fluid rounded modal-image" />
+                        <img src="images/Architecture/EcoTowers_3.jpg" class="img-fluid rounded modal-image" />
+                    </div>
+                    <div class="modal-footer">
+                        <p class="text-muted">Click images to view in large mode</p>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modular Habitat Nodes -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4 text-center">
+                    <div class="card-body p-4">
+                    <h4 class="mb-3" style="color: #228B22;">Modular Habitat Nodes</h4>
+                    <p>Quick-deploy shelters for off-grid living, disaster response, or space base prototypes. Lightweight, resilient, and stackable.</p>
+                    <button type="button" class="btn btn-outline-forest mt-3" data-bs-toggle="modal" data-bs-target="#modalHabitat">Browse Images</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Modular Habitat Nodes -->
+            <div class="modal fade" id="modalHabitat" tabindex="-1" aria-labelledby="modalHabitatLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalHabitatLabel">Modular Habitat Nodes</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-wrap gap-3 justify-content-center">
+                        <img src="images/Architecture/Habitat_1.jpg" class="img-fluid rounded modal-image" />
+                        <img src="images/Architecture/Habitat_2.jpg" class="img-fluid rounded modal-image" />
+                        <img src="images/Architecture/Habitat_3.jpg" class="img-fluid rounded modal-image" />
+                    </div>
+                    <div class="modal-footer">
+                        <p class="text-muted">Click images to view in large mode</p>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 

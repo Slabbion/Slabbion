@@ -347,7 +347,43 @@ body.light-mode .navbar-toggler .navbar-toggler-icon {
     border-radius: 12px;
 }
 
-/* === Text Glow Effects Per Service === */
+/* === Text Glow & Hover Effects Per Service === */
+.btn-outline-violet {
+    color: #6f42c1;
+    border-color: #6f42c1;
+}
+.btn-outline-violet:hover {
+    background-color: #6f42c1;
+    color: #fff;
+}
+
+.btn-outline-forest {
+    color: #228B22;
+    border-color: #228B22;
+}
+.btn-outline-forest:hover {
+    background-color: #228B22;
+    color: #fff;
+}
+
+.btn-outline-orange {
+    color: #e67e22;
+    border-color: #e67e22;
+}
+.btn-outline-orange:hover {
+    background-color: #e67e22;
+    color: #fff;
+}
+
+.btn-outline-deepred {
+    color: #b30000;
+    border-color: #b30000;
+}
+.btn-outline-deepred:hover {
+    background-color: #b30000;
+    color: #fff;
+}
+
 /* === Web Dev === */
 .glow-blue {
     color: #fff;
