@@ -348,42 +348,87 @@ body.light-mode .navbar-toggler .navbar-toggler-icon {
 }
 
 /* === Text Glow Effects Per Service === */
+/* === Web Dev === */
 .glow-blue {
     color: #fff;
     text-shadow: 
-        0 0 10px #007bff,
-        0 0 20px #007bff;
+        0 0 10px #5e17eb,
+        0 0 20px #5e17eb;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
+/* === Social Media === */
 .glow-green {
     color: #fff;
     text-shadow: 
-        0 0 10px #28a745,
-        0 0 20px #28a745;
+        0 0 10px #7ed957,
+        0 0 20px #7ed957;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
+/* === Graphic Design === */
 .glow-cyan {
     color: #fff;
     text-shadow: 
-        0 0 10px #17a2b8,
-        0 0 20px #17a2b8;
+        0 0 10px #5ce1e6,
+        0 0 20px #5ce1e6;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
+/* === Game Development === */
 .glow-red {
     color: #fff;
     text-shadow: 
-        0 0 10px #dc3545,
-        0 0 20px #dc3545;
+        0 0 10px #ff3131,
+        0 0 20px #ff3131;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
+/* === Vehicles === */
+.glow-orange {
+    color: #fff;
+    text-shadow: 
+        0 0 10px #e67e22,
+        0 0 20px #e67e22;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* === Body Armor === */
+.glow-deepred {
+    color: #fff;
+    text-shadow: 
+        0 0 10px #b30000,
+        0 0 20px #b30000;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* === Architecture === */
+.glow-teal {
+    color: #fff;
+    text-shadow: 
+        0 0 10px #228b22,
+        0 0 20px #228b22;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* === Drones === */
+.glow-violet {
+    color: #fff;
+    text-shadow: 
+        0 0 10px #8e44ad,
+        0 0 20px #8e44ad;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* === Custom Solutions === */
 .glow-yellow {
     color: #fff;
     text-shadow: 
@@ -393,6 +438,7 @@ body.light-mode .navbar-toggler .navbar-toggler-icon {
     letter-spacing: 1px;
 }
 
+/* === Partner === */
 .glow-gray {
     color: #fff;
     text-shadow: 
