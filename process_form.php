@@ -27,6 +27,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $websiteType = get_field('websiteType');
     $packageSelect = get_field('packageSelect');
 
+    $dronesDetails = get_field('dronesDetails');
+    $vehiclesDetails = get_field('vehiclesDetails');
+    $armorDetails = get_field('armorDetails');
+    $architectureDetails = get_field('architectureDetails');
+
     $graphicType = get_field('graphicType');
     $graphicPackage = get_field('graphicPackage');
     $graphicDescription = get_field('graphicDescription');
@@ -81,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Email setup
-    $to = "your@email.com"; // Replace this later
+    $to = "slabbion.tech@gmail.com"; // Replace this later
     $subject = "New Project Inquiry from $fullName";
     $headers = [
         "From: no-reply@slabbion.com", // Replace this later
@@ -114,6 +119,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message .= "Service: $socialService\n";
         $message .= "Package: $socialPackage\n";
         $message .= "Platforms: $socialPlatforms\n\n";
+    }
+
+    if (!empty($dronesDetails)) {
+    $message .= "--- Drones ---\n$dronesDetails\n\n";
+    }
+    if (!empty($vehiclesDetails)) {
+        $message .= "--- Vehicles ---\n$vehiclesDetails\n\n";
+    }
+    if (!empty($armorDetails)) {
+        $message .= "--- Body Armor ---\n$armorDetails\n\n";
+    }
+    if (!empty($architectureDetails)) {
+        $message .= "--- Architecture ---\n$architectureDetails\n\n";
     }
 
     if (!empty($customOption)) {

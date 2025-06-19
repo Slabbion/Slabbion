@@ -182,7 +182,9 @@
             <!-- WebDev Section -->
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="webdev" id="webDevCheck">
-                <label class="form-check-label" for="webDevCheck">Website Development</label>
+                <label class="form-check-label" for="webDevCheck">
+                    <i class="fas fa-globe"></i> Website Development
+                </label>
             </div>
 
             
@@ -248,7 +250,9 @@
             <!-- Graphic Design Section -->
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="graphics" id="graphicDesignCheck">
-                <label class="form-check-label" for="graphicDesignCheck">Graphic Design</label>
+                <label class="form-check-label" for="graphicDesignCheck">
+                    <i class="fas fa-paint-brush"></i> Graphic Design
+                </label>
             </div>
 
             
@@ -281,7 +285,9 @@
             <!--Social Media Package Section -->
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="social" id="socialMediaCheck">
-                <label class="form-check-label" for="socialMediaCheck">Social Media Management</label>
+                <label class="form-check-label" for="socialMediaCheck">
+                    <i class="fas fa-share-alt"></i> Social Media Management
+                </label>
             </div>
             
             <div id="socialMediaSection" style="display: none;">
@@ -307,11 +313,80 @@
                 <input class="form-control mb-2" placeholder="e.g., Instagram, LinkedIn, Facebook">
             </div>
 
+            <!-- Drone Section -->
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="drones" id="dronesCheck">
+                <label class="form-check-label" for="dronesCheck">
+                    <i class="fas fa-helicopter"></i> Drone Services
+                </label>
+            </div>
+            <div id="dronesSection" style="display: none;">
+                <label class="form-label mt-3">Drone Capabilities Needed</label>
+                <select class="form-control mb-3">
+                    <option>Surveillance & Recon</option>
+                    <option>Security Intercept</option>
+                    <option>Aerial Mapping</option>
+                    <option>Custom Swarm Design</option>
+                </select>
+            </div>
+
+            <!-- Vehicles Section -->
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="vehicles" id="vehiclesCheck">
+                <label class="form-check-label" for="vehiclesCheck">
+                    <i class="fas fa-car"></i> Vehicles
+                </label>
+            </div>
+            <div id="vehiclesSection" style="display: none;">
+                <label class="form-label mt-3">Vehicle Type</label>
+                <select class="form-control mb-3">
+                    <option>Off-Road Buggy</option>
+                    <option>On-Road Performance</option>
+                    <option>Survival/Apocalypse Build</option>
+                    <option>Concept Design</option>
+                </select>
+            </div>
+
+            <!-- Body Armor Section -->
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="armor" id="armorCheck">
+                <label class="form-check-label" for="armorCheck">
+                    <i class="fas fa-shield-alt"></i> Body Armor / Exosuits
+                </label>
+            </div>
+                <div id="armorSection" style="display: none;">
+                <label class="form-label mt-3">Armor Needs</label>
+                <select class="form-control mb-3">
+                    <option>Tactical Armor</option>
+                    <option>Lightweight Mobility Suit</option>
+                    <option>Exosuit Prototype</option>
+                    <option>Custom Spec Design</option>
+                </select>
+            </div>
+
+            <!-- Architecture Section -->
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="architecture" id="architectureCheck">
+                <label class="form-check-label" for="architectureCheck">
+                    <i class="fas fa-drafting-compass"></i> Architecture & Spatial Design
+                </label>
+            </div>
+            <div id="architectureSection" style="display: none;">
+                <label class="form-label mt-3">Architecture Services</label>
+                <select class="form-control mb-3">
+                    <option>3D Render / Visualization</option>
+                    <option>Custom Floorplans</option>
+                    <option>Interior Space Design</option>
+                    <option>Post-Apocalyptic Shelter</option>
+                </select>
+            </div>
 
             <!-- Custom Solutions Section -->
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="custom" id="customSolutionsCheck">
-                <label class="form-check-label" for="customSolutionsCheck">Custom Solutions</label>
+                <label class="form-check-label" for="customSolutionsCheck">
+                    <i class="fas fa-tools"></i> Custom Solutions
+                </label>
             </div>
 
             <div id="customSolutionsSection" style="display: none;">
@@ -447,12 +522,8 @@
                         statusDiv.innerHTML = `<div class="alert alert-danger">Something went wrong. Please try again later.</div>`;
                     }
                 });
-                </script>
-
-
-
+            </script>
         </form>
-
     </section>
 
     <!-- JS to control all sections -->
@@ -470,6 +541,11 @@
         toggleSection("graphicDesignCheck", "graphicDesignSection");
         toggleSection("socialMediaCheck", "socialMediaSection");
         toggleSection("customSolutionsCheck", "customSolutionsSection");
+        // New toggles for added services
+        toggleSection("dronesCheck", "dronesSection");
+        toggleSection("vehiclesCheck", "vehiclesSection");
+        toggleSection("armorCheck", "armorSection");
+        toggleSection("architectureCheck", "architectureSection");
         
     });
     </script>
