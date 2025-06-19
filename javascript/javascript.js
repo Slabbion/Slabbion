@@ -1,112 +1,137 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('#orderForm');
-    const fullNameInput = document.querySelector('#fullName');
-    const emailInput = document.querySelector('#email');
-    const phoneInput = document.querySelector('#phone');
-    const inquiryInput = document.querySelector('#Inquiry');
-    const billingCheckbox = document.querySelector('#billingSame');
-    const companyDetails = document.querySelector('#companyDetails');
-    const purposeSelect = document.querySelector('#Purpose');
-    const howHeardSelect = document.querySelector('#howHeard');
-    const termsCheckbox = document.querySelector('#terms');
+    const form = document.querySelector('#contactForm');
+    const statusDiv = document.querySelector('#formStatus');
 
-    if (!form) {
-        console.error("Form not found.");
-        return;
-    }
+    if (!form) return console.error("Contact form not found!");
 
-    // Function to validate email
+    // 📌 All fields mapped to PHP
+    const fields = {
+        fullName: form.querySelector('#fullName'),
+        email: form.querySelector('#email'),
+        phone: form.querySelector('#phone'),
+        city: form.querySelector('#city'),
+        goals: form.querySelector('#goals'),
+        budget: form.querySelector('#budget'),
+        timeline: form.querySelector('#timeline'),
+        referenceLinks: form.querySelector('#referenceLinks'),
+        referralName: form.querySelector('#referralName'),
+        referralContact: form.querySelector('#referralContact'),
+        inquiry: form.querySelector('#inquiry'),
+        websiteType: form.querySelector('#websiteType'),
+        packageSelect: form.querySelector('#packageSelect'),
+        dronesDetails: form.querySelector('#dronesDetails'),
+        vehiclesDetails: form.querySelector('#vehiclesDetails'),
+        armorDetails: form.querySelector('#armorDetails'),
+        architectureDetails: form.querySelector('#architectureDetails'),
+        graphicType: form.querySelector('#graphicType'),
+        graphicPackage: form.querySelector('#graphicPackage'),
+        graphicDescription: form.querySelector('#graphicDescription'),
+        socialService: form.querySelector('#socialService'),
+        socialPackage: form.querySelector('#socialPackage'),
+        socialPlatforms: form.querySelector('#socialPlatforms'),
+        customOption: form.querySelector('#customOption'),
+        customDescription: form.querySelector('#customDescription'),
+        fileUpload: form.querySelector('#fileUpload'),
+    };
+
+    // ✅ Helper: Email and phone validators
     function isValidEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
-    // Function to validate phone number
     function isValidPhone(phone) {
-        const re = /^\(?\+?[0-9]*\)?[-.\s]?([0-9]{1,3})?[-.\s]?[0-9]{1,3}[-.\s]?[0-9]{4,6}$/;
-        return re.test(phone);
+        return /^\(?\+?[0-9]*\)?[-.\s]?([0-9]{1,4})?[-.\s]?[0-9]{3,4}[-.\s]?[0-9]{4,6}$/.test(phone);
     }
 
-    // Toggle company details section
-    function toggleCompanyDetails() {
-        if (billingCheckbox.checked) {
-            companyDetails.style.display = 'none';
-        } else {
-            companyDetails.style.display = 'block';
+    // ❌ Mark field invalid with message
+    function markInvalid(field, message = "This field is required.") {
+        if (!field) return;
+        field.classList.add('is-invalid');
+        let feedback = field.parentElement.querySelector('.invalid-feedback');
+        if (!feedback) {
+            feedback = document.createElement('div');
+            feedback.className = 'invalid-feedback';
+            field.parentElement.appendChild(feedback);
         }
+        feedback.innerText = message;
     }
 
-    // Attach toggle event to the checkbox
-    billingCheckbox.addEventListener('change', toggleCompanyDetails);
+    // 🧼 Clear all validation states
+    function clearValidation() {
+        form.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+        form.querySelectorAll('.invalid-feedback').forEach(el => el.remove());
+        statusDiv.innerHTML = '';
+    }
 
-    // Form submission validation
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
+    // 📨 Submit form via AJAX
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        clearValidation();
 
-        // Reset previous error styles
-        document.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+        let valid = true;
 
-        let isValid = true;
-
-        // Validate all required fields
-        if (!fullNameInput.value.trim()) {
-            fullNameInput.classList.add('is-invalid');
-            isValid = false;
+        // 🔒 Validate required fields (match PHP)
+        if (!fields.fullName.value.trim()) {
+            markInvalid(fields.fullName, "Full name is required.");
+            valid = false;
         }
 
-        if (!isValidEmail(emailInput.value)) {
-            emailInput.classList.add('is-invalid');
-            isValid = false;
+        if (!isValidEmail(fields.email.value.trim())) {
+            markInvalid(fields.email, "Valid email required.");
+            valid = false;
         }
 
-        if (!isValidPhone(phoneInput.value)) {
-            phoneInput.classList.add('is-invalid');
-            isValid = false;
+        if (!isValidPhone(fields.phone.value.trim())) {
+            markInvalid(fields.phone, "Valid phone number required.");
+            valid = false;
         }
 
-        if (!inquiryInput.value.trim()) {
-            inquiryInput.classList.add('is-invalid');
-            isValid = false;
+        if (!fields.goals.value.trim()) {
+            markInvalid(fields.goals, "Project goals are required.");
+            valid = false;
         }
 
-        if (!purposeSelect.value) {
-            purposeSelect.classList.add('is-invalid');
-            isValid = false;
+        if (!fields.referralName.value.trim()) {
+            markInvalid(fields.referralName, "Referral name is required.");
+            valid = false;
         }
 
-        if (!howHeardSelect.value) {
-            howHeardSelect.classList.add('is-invalid');
-            isValid = false;
+        if (!fields.referralContact.value.trim()) {
+            markInvalid(fields.referralContact, "Referral contact is required.");
+            valid = false;
         }
 
-        if (!termsCheckbox.checked) {
-            termsCheckbox.classList.add('is-invalid');
-            isValid = false;
+        if (!valid) {
+            statusDiv.innerHTML = `<div class="alert alert-danger">Please correct the highlighted fields.</div>`;
+            statusDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            return;
         }
 
-        if (isValid) {
-            console.log('Form Data:', {
-                fullName: fullNameInput.value,
-                email: emailInput.value,
-                phone: phoneInput.value,
-                inquiry: inquiryInput.value,
-                purpose: purposeSelect.value,
-                howHeard: howHeardSelect.value
+        // 🚀 Ready to send
+        statusDiv.innerHTML = "Sending...";
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch("process_form.php", {
+                method: "POST",
+                body: formData
             });
 
-            alert('Form submitted successfully!');
-            form.reset();
-            toggleCompanyDetails(); // Reset company details visibility
-        } else {
-            const invalidField = document.querySelector('.is-invalid');
-            if (invalidField) invalidField.focus();
+            const result = await response.json();
+
+            if (result.status === "success") {
+                statusDiv.innerHTML = `<div class="alert alert-success">${result.message}</div>`;
+                form.reset();
+            } else {
+                const msg = result.errors ? result.errors.join("<br>") : result.message;
+                statusDiv.innerHTML = `<div class="alert alert-danger">${msg}</div>`;
+            }
+        } catch (error) {
+            console.error("Form submission error:", error);
+            statusDiv.innerHTML = `<div class="alert alert-danger">An unexpected error occurred. Please try again later.</div>`;
         }
     });
-
-    // Initial call to toggleCompanyDetails to set the correct state
-    toggleCompanyDetails();
 });
-
 
 // Theme toggle functionality
 function toggleTheme() {
