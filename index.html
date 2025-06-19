@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Slabbion — Your Partner in Tech Evolution</title>
+    <meta name="description" content="Slabbion: Expert web development services helping businesses grow online with modern, responsive, and scalable solutions." />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
+          crossorigin="anonymous" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/6735e83b36.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Custom Web Icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.ico" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Slabbion",
+      "description": "Web development services helping businesses grow online with modern, responsive, and scalable solutions.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "South Africa"
+      },
+      "telephone": "+27 ",
+      "url": "https://slabbion.com/"
+    }
+    </script>
+</head>
+
+
+<body>
+
+    <!-- NAV BAR -->
+    <section id="title">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="index.html">
+                    <!-- Logo -->
+                    <img src="images/SlabbionLogo.png" alt="Slabbion Logo">
+                </a>
+
+                <!-- Toggle Theme Button -->
+                <button id="theme-toggle" class="btn btn-light mt-3 feature-box d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                    <i id="theme-icon" class="fas fa-moon"></i>
+                </button>
+
+                <!-- Offcanvas Toggler -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- COLLAPSE NAVBAR -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            <!-- Logo -->
+                            <img src="images/SlabbionLogo.png" alt="Slabbion Logo" class="nav-logo">
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <!-- OFFCANVAS BODY -->
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 350px;">
+
+                            <!-- HOME TAB -->
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html" title="Go to Home Page">Home</a>
+                            </li>
+
+                            <!-- Social Media Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="eventsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
+                                    <li><a class="dropdown-item" href="webdevelopment.html">Web Development</a></li>
+                                    <li><a class="dropdown-item" href="socialmedia.html">Social Media</a></li>
+                                    <li><a class="dropdown-item" href="graphicdesign.html">Graphic Design</a></li>
+                                    <li><a class="dropdown-item" href="gamedevelopment.html">Game Development</a></li>
+                                    <li><a class="dropdown-item" href="customsolutions.html">Custom Solutions</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Contact Us TAB -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="hero" class="text-center py-5">
+        <div class="container">
+            <img src="images/Slabbion_Logo_2500x500px.png" alt="Slabbion Logo" class="logo">
+            <h5 class="display-4 glow-blue">Our Services</h1>
+            <p class="lead font-weight-bold">Slabbion empowers you through tailored digital solutions — from modern web development to content-driven social media strategy and standout design.</p>
+            <a href="contact.html#contact" class="btn btn-light mt-3 feature-box">Get Your Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+
+            <div class="row">
+                <!-- Web Development -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-code fa-3x mb-3 text-primary"></i>
+                        <h4 class="mb-2">Web Development</h4>
+                        <p>Modern, responsive websites built for performance and scalability.</p>
+                        <a href="webdevelopment.html#web-development" class="btn btn-outline-primary mt-3">Explore</a>
+                    </div>
+                </div>
+
+                <!-- Social Media Management -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-share-alt fa-3x mb-3 text-success"></i>
+                        <h4 class="mb-2">Social Media</h4>
+                        <p>Grow your digital presence through data-driven content strategies.</p>
+                        <a href="socialmedia.html#social-media-management" class="btn btn-outline-success mt-3">Explore</a>
+                    </div>
+                </div>
+
+                <!-- Graphic Design -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-paint-brush fa-3x mb-3 text-info"></i>
+                        <h4 class="mb-2">Graphic Design</h4>
+                        <p>Brand-focused designs that communicate your identity with impact.</p>
+                        <a href="graphicdesign.html#graphic-design" class="btn btn-outline-info mt-3">Explore</a>
+                    </div>
+                </div>
+
+                <!-- Game Development -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-gamepad fa-3x mb-3 text-danger"></i>
+                        <h4 class="mb-2">Game Development</h4>
+                        <p>Slabbion brings creativity and technical precision to the gaming world.</p>
+                        <a href="gamedevelopment.html#game-development" class="btn btn-outline-danger mt-3">Explore</a>
+                    </div>
+                </div>
+
+                <!-- Custom Solutions -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-cogs fa-3x mb-3 text-warning"></i>
+                        <h4 class="mb-2">Custom Solutions</h4>
+                        <p>Need something outside the box? We design and build around your vision.</p>
+                        <a href="customsolutions.html#custom-solutions" class="btn btn-outline-warning mt-3">Explore</a>
+                    </div>
+                </div>
+
+                <!-- Join Our Team -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-users fa-3x mb-3 text-secondary"></i>
+                        <h4 class="mb-2">Partner With Slabbion</h4>
+                        <p>We're always on the lookout for talented collaborators and creatives. Let’s build something amazing together.</p>
+                        <a href="contact.html#contact" class="btn btn-outline-secondary mt-3">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMAGE SCROLLER -->
+    <section id="image-scroller">
+        <!-- CAROUSEL SCROLLER -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            
+            <!-- CAROUSEL INDICATORS -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Web Development Slide"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Social Media Management Slide"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Graphic Design Slide"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Game Development Slide"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Custom Solutions Slide"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Partner With Us Slide"></button>
+            </div>
+
+            <!-- CAROUSEL SLIDES -->
+            <div class="carousel-inner">
+                
+                <!-- Web Development Slide -->
+                <div class="carousel-item active">
+                    <img src="images/WebDev_Logo_2500x500px.png" class="d-block w-100" alt="Web Development Service">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Web Development</h5>
+                        <p>We build fast, scalable, and beautifully crafted websites that elevate your digital footprint.</p>
+                    </div>
+                </div>
+
+                <!-- Social Media Management Slide -->
+                <div class="carousel-item">
+                    <img src="images/SocialMedia_Logo_2500x500px.png" class="d-block w-100" alt="Social Media Management Service">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Social Media Management</h5>
+                        <p>Reach your ideal audience with engaging content and consistent branding across all platforms.</p>
+                    </div>
+                </div>
+
+                <!-- Graphic Design Slide -->
+                <div class="carousel-item">
+                    <img src="images/GraphicDesign_Logo_2500x500px.png" class="d-block w-100" alt="Graphic Design Service">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Graphic Design</h5>
+                        <p>From logos to full brand systems — we craft visuals that speak your brand’s truth with style.</p>
+                    </div>
+                </div>
+
+                <!-- Game Development Slide -->
+                <div class="carousel-item">
+                    <img src="images/GameDevelopment_Logo_2500x500px.png" class="d-block w-100" alt="Game Development Service">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Game Development</h5>
+                        <p>Whether indie or AAA-inspired, we create game experiences that captivate, challenge, and inspire.</p>
+                    </div>
+                </div>
+
+                <!-- Custom Solutions Slide -->
+                <div class="carousel-item">
+                    <img src="images/CustomSolutions_Logo_2500x500px.png" class="d-block w-100" alt="Custom Solutions Service">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Custom Solutions</h5>
+                        <p>Have a bold idea? From apps to automations — we design and build digital tools that work for you.</p>
+                    </div>
+                </div>
+
+                <!-- Partner With Us Slide -->
+                <div class="carousel-item">
+                    <img src="images/ContactUs_Logo_2500x500px.png" class="d-block w-100" alt="Partner With Slabbion">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Partner With Slabbion</h5>
+                        <p>Join forces with a team that values excellence, creativity, and long-term impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Slabbion -->
+    <section id="services" class="py-5 text-white">
+        <div class="container">
+            <h2 class="mb-5 text-center section-title glow-blue">💡 Why Choose Slabbion?</h2>
+            <div class="row text-center g-4 justify-content-center">
+
+            <!-- Innovation -->
+            <div class="col-md-6 col-lg-4 col-xl-2">
+                <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                <i class="fas fa-brain fa-2x mb-3 text-secondary glow-icon"></i>
+                <h5 class="fw-bold">Innovation-Driven</h5>
+                <p>Creative solutions, not cookie-cutter builds.</p>
+                </div>
+            </div>
+
+            <!-- Security -->
+            <div class="col-md-6 col-lg-4 col-xl-2">
+                <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                <i class="fas fa-user-shield fa-2x mb-3 text-light glow-icon"></i>
+                <h5 class="fw-bold">Security Obsessed</h5>
+                <p>Encryption, audits, and secure-by-default systems.</p>
+                </div>
+            </div>
+
+            <!-- Client Focus -->
+            <div class="col-md-6 col-lg-4 col-xl-2">
+                <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                <i class="fas fa-thumbs-up fa-2x mb-3 text-success glow-icon"></i>
+                <h5 class="fw-bold">Client-First</h5>
+                <p>You lead, we enhance. Collaboration is core.</p>
+                </div>
+            </div>
+
+            <!-- Speed -->
+            <div class="col-md-6 col-lg-4 col-xl-2">
+                <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                <i class="fas fa-stopwatch fa-2x mb-3 text-warning glow-icon"></i>
+                <h5 class="fw-bold">Lightning Fast</h5>
+                <p>Speed in delivery, speed in product. Period.</p>
+                </div>
+            </div>
+
+            <!-- Full Stack -->
+            <div class="col-md-6 col-lg-4 col-xl-2">
+                <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                <i class="fas fa-layer-group fa-2x mb-3 text-info glow-icon"></i>
+                <h5 class="fw-bold">Full-Stack Experts</h5>
+                <p>From design to DevOps — no outsourcing here.</p>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="col-md-6 col-lg-4 col-xl-2">
+                <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                <i class="fas fa-chart-line fa-2x mb-3 text-danger glow-icon"></i>
+                <h5 class="fw-bold">Results You Can Measure</h5>
+                <p>Analytics, KPIs, and ROI baked in from day one.</p>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title glow-blue">📣 What Our Clients Say</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+            <!-- Testimonial Card -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4">
+                <div class="card-body p-4">
+                    <blockquote class="blockquote mb-4">
+                    <p>"The website Slabbion built for us is sleek and professional. It reflects our work ethic and quality perfectly."</p>
+                    <footer class="blockquote-footer">Primo Installations, <cite><a href="https://www.primoinstallations.com" target="_blank">www.primoinstallations.com</a></cite></footer>
+                    </blockquote>
+                    <div class="stars text-warning">★★★★★</div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4">
+                <div class="card-body p-4">
+                    <blockquote class="blockquote mb-4">
+                    <p>"Slabbion helped us rebrand from the ground up — the website, visuals, and messaging are spot on!"</p>
+                    <footer class="blockquote-footer">Umbretta Mills, <cite><a href="https://www.umbrettamills.com" target="_blank">www.umbrettamills.com</a></cite></footer>
+                    </blockquote>
+                    <div class="stars text-warning">★★★★★</div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4">
+                <div class="card-body p-4">
+                    <blockquote class="blockquote mb-4">
+                    <p>"Slabbion turned my vision into a professional and modern website. Their attention to branding was incredible."</p>
+                    <footer class="blockquote-footer">Antone, <cite>Entrepreneur</cite></footer>
+                    </blockquote>
+                    <div class="stars text-warning">★★★★★</div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4">
+                <div class="card-body p-4">
+                    <blockquote class="blockquote mb-4">
+                    <p>"Loved working with Slabbion — seamless design, perfect communication, and real results."</p>
+                    <footer class="blockquote-footer">Moray, <cite>Business Owner</cite></footer>
+                    </blockquote>
+                    <div class="stars text-warning">★★★★★</div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4">
+                <div class="card-body p-4">
+                    <blockquote class="blockquote mb-4">
+                    <p>"Our new website by Slabbion is clean, fast, and professional. Couldn't be happier with the service."</p>
+                    <footer class="blockquote-footer">Dawid, <cite>Freelancer</cite></footer>
+                    </blockquote>
+                    <div class="stars text-warning">★★★★★</div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4">
+                <div class="card-body p-4">
+                    <blockquote class="blockquote mb-4">
+                    <p>"Working with Slabbion was one of the best decisions we made. Their designs communicate quality and trust."</p>
+                    <footer class="blockquote-footer">Michelle Adams, <cite>Marketing Lead</cite></footer>
+                    </blockquote>
+                    <div class="stars text-warning">★★★★★</div>
+                </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center footer-glow">
+        <div class="container">
+            <p>“Whatever you do, do it for the glory of God.” — <em>1 Corinthians 10:31</em></p>
+        </div>
+    </footer>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark footer-glow text-light text-center py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Developer Credit -->
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0">Crafted with excellence by <strong class="glow-blue">Niël Slabbert</strong></p>
+                </div>
+
+                <!-- Social Buttons -->
+                <div class="col-md-6">
+                    <div class="social-icons d-flex justify-content-center gap-3">
+                        <a href="https://www.facebook.com/slabbion" target="_blank"><i class="fab fa-facebook-f glow-blue"></i></a>
+                        <a href="https://x.com/slabbion" target="_blank"><i class="fab fa-x-twitter glow-blue"></i></a>
+                        <a href="https://www.instagram.com/slabbion" target="_blank"><i class="fab fa-instagram glow-blue"></i></a>
+                        <a href="https://www.tiktok.com/@slabbion" target="_blank"><i class="fab fa-tiktok glow-blue"></i></a>
+                        <a href="https://www.youtube.com/@slabbion" target="_blank"><i class="fab fa-youtube glow-blue"></i></a>
+                        <a href="https://www.linkedin.com/company/slabbion" target="_blank"><i class="fab fa-linkedin-in glow-blue"></i></a>
+                    </div>
+                    <p class="mt-3 mb-0">&copy; 2025 <span class="glow-blue">Slabbion</span> — Web, Social & Design. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<!-- Theme Toggle Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+
+        // Apply stored theme on load
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme === 'light') {
+            document.body.classList.add('light-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            document.body.classList.remove('light-mode');
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+
+        // Toggle logic
+        themeToggleBtn.addEventListener('click', function () {
+            document.body.classList.toggle('light-mode');
+            const isLight = document.body.classList.contains('light-mode');
+
+            // Switch icons
+            themeIcon.classList.toggle('fa-moon', !isLight);
+            themeIcon.classList.toggle('fa-sun', isLight);
+
+            // Save preference
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
+    });
+</script>
+
+
+</body>
+</html>
