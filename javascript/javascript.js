@@ -1,10 +1,11 @@
+// ========== 🌐 General Form Logic ==========
+
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('#contactForm');
     const statusDiv = document.querySelector('#formStatus');
-
     if (!form) return console.error("Contact form not found!");
 
-    // 📌 All fields mapped to PHP
+    // 📌 Map all fields (same as process_form.php)
     const fields = {
         fullName: form.querySelector('#fullName'),
         email: form.querySelector('#email'),
@@ -17,24 +18,32 @@ document.addEventListener('DOMContentLoaded', function () {
         referralName: form.querySelector('#referralName'),
         referralContact: form.querySelector('#referralContact'),
         inquiry: form.querySelector('#inquiry'),
+
         websiteType: form.querySelector('#websiteType'),
         packageSelect: form.querySelector('#packageSelect'),
         dronesDetails: form.querySelector('#dronesDetails'),
         vehiclesDetails: form.querySelector('#vehiclesDetails'),
         armorDetails: form.querySelector('#armorDetails'),
         architectureDetails: form.querySelector('#architectureDetails'),
+
         graphicType: form.querySelector('#graphicType'),
         graphicPackage: form.querySelector('#graphicPackage'),
         graphicDescription: form.querySelector('#graphicDescription'),
+
         socialService: form.querySelector('#socialService'),
         socialPackage: form.querySelector('#socialPackage'),
         socialPlatforms: form.querySelector('#socialPlatforms'),
+
+        aiAgentService: form.querySelector('#aiAgentService'),
+        aiAgentPurpose: form.querySelector('#aiAgentPurpose'),
+
         customOption: form.querySelector('#customOption'),
         customDescription: form.querySelector('#customDescription'),
+
         fileUpload: form.querySelector('#fileUpload'),
     };
 
-    // ✅ Helper: Email and phone validators
+    // 🧠 Validators
     function isValidEmail(email) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
@@ -43,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return /^\(?\+?[0-9]*\)?[-.\s]?([0-9]{1,4})?[-.\s]?[0-9]{3,4}[-.\s]?[0-9]{4,6}$/.test(phone);
     }
 
-    // ❌ Mark field invalid with message
+    // ❌ Mark field invalid
     function markInvalid(field, message = "This field is required.") {
         if (!field) return;
         field.classList.add('is-invalid');
@@ -56,50 +65,27 @@ document.addEventListener('DOMContentLoaded', function () {
         feedback.innerText = message;
     }
 
-    // 🧼 Clear all validation states
+    // 🧽 Clear validation errors
     function clearValidation() {
         form.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
         form.querySelectorAll('.invalid-feedback').forEach(el => el.remove());
         statusDiv.innerHTML = '';
     }
 
-    // 📨 Submit form via AJAX
+    // 📤 Submit form via AJAX
     form.addEventListener('submit', async function (e) {
         e.preventDefault();
         clearValidation();
 
         let valid = true;
 
-        // 🔒 Validate required fields (match PHP)
-        if (!fields.fullName.value.trim()) {
-            markInvalid(fields.fullName, "Full name is required.");
-            valid = false;
-        }
-
-        if (!isValidEmail(fields.email.value.trim())) {
-            markInvalid(fields.email, "Valid email required.");
-            valid = false;
-        }
-
-        if (!isValidPhone(fields.phone.value.trim())) {
-            markInvalid(fields.phone, "Valid phone number required.");
-            valid = false;
-        }
-
-        if (!fields.goals.value.trim()) {
-            markInvalid(fields.goals, "Project goals are required.");
-            valid = false;
-        }
-
-        if (!fields.referralName.value.trim()) {
-            markInvalid(fields.referralName, "Referral name is required.");
-            valid = false;
-        }
-
-        if (!fields.referralContact.value.trim()) {
-            markInvalid(fields.referralContact, "Referral contact is required.");
-            valid = false;
-        }
+        // ✅ Required field checks
+        if (!fields.fullName.value.trim()) { markInvalid(fields.fullName, "Full name is required."); valid = false; }
+        if (!isValidEmail(fields.email.value.trim())) { markInvalid(fields.email, "Valid email required."); valid = false; }
+        if (!isValidPhone(fields.phone.value.trim())) { markInvalid(fields.phone, "Valid phone number required."); valid = false; }
+        if (!fields.goals.value.trim()) { markInvalid(fields.goals, "Project goals are required."); valid = false; }
+        if (!fields.referralName.value.trim()) { markInvalid(fields.referralName, "Referral name is required."); valid = false; }
+        if (!fields.referralContact.value.trim()) { markInvalid(fields.referralContact, "Referral contact is required."); valid = false; }
 
         if (!valid) {
             statusDiv.innerHTML = `<div class="alert alert-danger">Please correct the highlighted fields.</div>`;
@@ -107,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        // 🚀 Ready to send
+        // 🚀 Submit via fetch
         statusDiv.innerHTML = "Sending...";
         const formData = new FormData(form);
 
@@ -133,28 +119,60 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Theme toggle functionality
-function toggleTheme() {
-    document.body.classList.toggle('light-mode');
-    const theme = document.body.classList.contains('light-mode') ? 'light' : 'dark';
-    localStorage.setItem('theme', theme);
-}
+// ========== 🎨 Theme Toggle ==========
 
-document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
-if (localStorage.getItem('theme') === 'light') {
-    document.body.classList.add('light-mode');
-}
+document.addEventListener('DOMContentLoaded', function () {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
 
-// Modal functionality
-const modal = document.getElementById('projectModal');
-const closeBtn = modal?.querySelector('.close');
-const viewProjectButtons = document.querySelectorAll('.btn-primary');
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'light') {
+        document.body.classList.add('light-mode');
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+    }
 
-if (modal && closeBtn && viewProjectButtons.length > 0) {
+    themeToggleBtn?.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        const isLight = document.body.classList.contains('light-mode');
+        themeIcon.classList.toggle('fa-sun', isLight);
+        themeIcon.classList.toggle('fa-moon', !isLight);
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+});
+
+// ========== 🔘 Dynamic Section Toggles ==========
+
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleSection = (checkboxId, sectionId) => {
+        const checkbox = document.getElementById(checkboxId);
+        const section = document.getElementById(sectionId);
+        checkbox?.addEventListener("change", () => {
+            section.style.display = checkbox.checked ? "block" : "none";
+        });
+    };
+
+    toggleSection("webDevCheck", "webDevSection");
+    toggleSection("graphicDesignCheck", "graphicDesignSection");
+    toggleSection("socialMediaCheck", "socialMediaSection");
+    toggleSection("customSolutionsCheck", "customSolutionsSection");
+    toggleSection("aiAgentsCheck", "aiAgentsSection");
+    toggleSection("dronesCheck", "dronesSection");
+    toggleSection("vehiclesCheck", "vehiclesSection");
+    toggleSection("armorCheck", "armorSection");
+    toggleSection("architectureCheck", "architectureSection");
+});
+
+// ========== 🖼️ Project Modal Viewer ==========
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById('projectModal');
+    const closeBtn = modal?.querySelector('.close');
+    const viewProjectButtons = document.querySelectorAll('.btn-primary');
+
     function openModal(id) {
         modal.style.display = 'flex';
         const modalImages = modal.querySelector('.modal-images');
-        modalImages.innerHTML = ''; // Clear existing content
+        modalImages.innerHTML = '';
         for (let i = 1; i <= 3; i++) {
             const img = document.createElement('img');
             img.src = `images/project${id}_image${i}.jpg`;
@@ -176,8 +194,19 @@ if (modal && closeBtn && viewProjectButtons.length > 0) {
         });
     });
 
-    closeBtn.addEventListener('click', closeModal);
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) closeModal();
+    closeBtn?.addEventListener('click', closeModal);
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
     });
-}
+});
+
+// ========== ✅ Select2 Initialization ==========
+
+document.addEventListener('DOMContentLoaded', function () {
+    if (window.$ && $.fn.select2) {
+        $('#websiteType').select2({
+            placeholder: 'Search or select a website type',
+            allowClear: true
+        });
+    }
+});

@@ -23,6 +23,9 @@
     <!-- Required Select2 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
+    <!-- Required Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
 
@@ -236,19 +239,6 @@
                 </select>
             </div>
 
-            <!-- Required Select2 JS -->
-            <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
-            <!-- Initialize Select2 -->
-            <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                $('#websiteType').select2({
-                placeholder: 'Search or select a website type',
-                allowClear: true
-                });
-            });
-            </script>
-
             <!-- Graphic Design Section -->
             <div class="form-check glow-cyan">
                 <input class="form-check-input glow-cyan" type="checkbox" value="graphics" id="graphicDesignCheck">
@@ -314,6 +304,51 @@
                 <label class="form-label mt-3">Which platforms are you targeting?</label>
                 <input class="form-control mb-2" placeholder="e.g., Instagram, LinkedIn, Facebook">
             </div>
+
+            <!-- AI Agents Package Section -->
+            <div class="form-check glow-yellow">
+                <input class="form-check-input" type="checkbox" value="ai-agents" id="aiAgentsCheck">
+                <label class="form-check-label" for="aiAgentsCheck">
+                    <i class="fas fa-robot"></i> MegaXGnome AI Agents
+                </label>
+            </div>
+
+            
+            <!-- Ai Agents Section -->
+            <div id="aiAgentsSection" style="display: none;">
+                <label class="form-label mt-3">Which AI Agent do you need?</label>
+                <select class="form-control">
+                    <option value="">Select Agent</option>
+                    <option>🧭 Orion — Dashboards & Control Panels</option>
+                    <option>🛰️ Nova — Price Monitors & Logs</option>
+                    <option>🕸️ Hex — News Radar & Anomaly Alerts</option>
+                    <option>🌞 Solis — Daily Insights & Quotes</option>
+                    <option>🖤 Vanta — Private Journaling Agent</option>
+                    <option>🌌 Zenith — Full Agent Coordination</option>
+                </select>
+
+                <label class="form-label mt-3">What is your use case?</label>
+                <select class="form-control">
+                    <option value="">Select Purpose</option>
+                    <option>Agent Dashboard</option>
+                    <option>Conversational Assistant</option>
+                    <option>API Integration / Logic Bot</option>
+                    <option>Data Visualization / Alerts</option>
+                    <option>Creative Prompt Generator</option>
+                    <option>Custom Task Automator</option>
+                </select>
+
+                <label class="form-label mt-3">How urgently do you need it?</label>
+                <select class="form-control mb-3">
+                    <option>Just Exploring Ideas</option>
+                    <option>Next Few Weeks</option>
+                    <option>Urgent — Within 7 Days</option>
+                </select>
+
+                <label class="form-label mt-3">Any specific features or inspiration?</label>
+                <textarea class="form-control mb-3" rows="3" placeholder="e.g. I want an agent like Vanta, but focused on creative writing instead of journaling. Should have a dark theme and export entries."></textarea>
+            </div>
+
 
             <!-- Drone Section -->
             <div class="form-check glow-violet">
@@ -484,7 +519,6 @@
                     </small>
                 </div>
             </section>
-
             
             <!-- Submit -->
             <div class="text-center">
@@ -494,66 +528,10 @@
             <!-- Status message -->
             <div id="formStatus" class="text-center mt-3"></div>
 
-            <script>
-                document.getElementById("contactForm").addEventListener("submit", async function(e) {
-                    e.preventDefault();
-
-                    const form = e.target;
-                    const formData = new FormData(form);
-                    const statusDiv = document.getElementById("formStatus");
-
-                    statusDiv.innerHTML = "Sending...";
-
-                    try {
-                        const response = await fetch("process_form.php", {
-                            method: "POST",
-                            body: formData
-                        });
-
-                        const result = await response.json();
-
-                        if (result.status === "success") {
-                            statusDiv.innerHTML = `<div class="alert alert-success">${result.message}</div>`;
-                            form.reset(); // Optional: reset form after successful send
-                        } else {
-                            const msg = result.errors ? result.errors.join("<br>") : result.message;
-                            statusDiv.innerHTML = `<div class="alert alert-danger">${msg}</div>`;
-                        }
-
-                    } catch (error) {
-                        console.error("Form submit error:", error);
-                        statusDiv.innerHTML = `<div class="alert alert-danger">Something went wrong. Please try again later.</div>`;
-                    }
-                });
-            </script>
         </form>
     </section>
 
-    <!-- JS to control all sections -->
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const toggleSection = (checkboxId, sectionId) => {
-            const checkbox = document.getElementById(checkboxId);
-            const section = document.getElementById(sectionId);
-            checkbox.addEventListener("change", () => {
-                section.style.display = checkbox.checked ? "block" : "none";
-            });
-        };
-
-        toggleSection("webDevCheck", "webDevSection");
-        toggleSection("graphicDesignCheck", "graphicDesignSection");
-        toggleSection("socialMediaCheck", "socialMediaSection");
-        toggleSection("customSolutionsCheck", "customSolutionsSection");
-        // New toggles for added services
-        toggleSection("dronesCheck", "dronesSection");
-        toggleSection("vehiclesCheck", "vehiclesSection");
-        toggleSection("armorCheck", "armorSection");
-        toggleSection("architectureCheck", "architectureSection");
-        
-    });
-    </script>
-
-        <!-- IMAGE SCROLLER -->
+    <!-- IMAGE SCROLLER -->
     <section id="image-scroller">
         <!-- CAROUSEL SCROLLER -->
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -736,38 +714,10 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
-<!-- Theme Toggle Script -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
+<!-- Import main.js -->
+<script src="javascript/javascript.js"></script> 
 
-        // Apply stored theme on load
-        const storedTheme = localStorage.getItem('theme');
-        if (storedTheme === 'light') {
-            document.body.classList.add('light-mode');
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-        } else {
-            document.body.classList.remove('light-mode');
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
-        }
 
-        // Toggle logic
-        themeToggleBtn.addEventListener('click', function () {
-            document.body.classList.toggle('light-mode');
-            const isLight = document.body.classList.contains('light-mode');
-
-            // Switch icons
-            themeIcon.classList.toggle('fa-moon', !isLight);
-            themeIcon.classList.toggle('fa-sun', isLight);
-
-            // Save preference
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
-        });
-    });
-</script>
 
 
 </body>

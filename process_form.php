@@ -1,16 +1,16 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Helper to safely get and sanitize fields
+    // 🌟 Helper: Clean and safely fetch POST data
     function get_field($name, $default = '') {
         return htmlspecialchars(trim($_POST[$name] ?? $default));
     }
 
-    // Initialize Uploads
+    // 🟡 Handle uploaded file (if any)
     $uploadSuccess = "No file uploaded.";
     $uploadedFilePath = "";
 
-    // Required fields
+    // 🧾 Required fields
     $fullName = get_field('fullName');
     $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
     $phone = get_field('phone');
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $referralContact = get_field('referralContact');
     $inquiry = get_field('inquiry');
 
-    // Optional fields
+    // 🧩 Optional fields
     $websiteType = get_field('websiteType');
     $packageSelect = get_field('packageSelect');
 
@@ -43,7 +43,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $customOption = get_field('customOption');
     $customDescription = get_field('customDescription');
 
-    // Validate required ones
+    $aiAgentService = get_field('aiAgentService');
+    $aiAgentPurpose = get_field('aiAgentPurpose');
+
+    // ❗ Validate required fields
     $errors = [];
     if (empty($fullName)) $errors[] = "Full name is required.";
     if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Valid email is required.";
@@ -51,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($goals)) $errors[] = "Project goals are required.";
     if (empty($referralName) || empty($referralContact)) $errors[] = "Referral info is required.";
 
-    // File upload handling (done before email in case of errors)
+    // 📁 Handle file upload
     if (isset($_FILES['fileUpload']) && $_FILES['fileUpload']['error'] === UPLOAD_ERR_OK) {
         $fileTmpPath = $_FILES['fileUpload']['tmp_name'];
         $fileName = basename($_FILES['fileUpload']['name']);
@@ -79,28 +82,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Stop early if any errors
+    // 🚫 Return error response early
     if (!empty($errors)) {
         echo json_encode(["status" => "error", "errors" => $errors]);
         exit;
     }
 
-    // Email setup
-    $to = "slabbion.tech@gmail.com"; // Replace this later
+    // 📬 Email Setup
+    $to = "slabbion.tech@gmail.com";
     $subject = "New Project Inquiry from $fullName";
     $headers = [
-        "From: no-reply@slabbion.com", // Replace this later
+        "From: no-reply@slabbion.com",
         "Reply-To: $email",
         "Content-Type: text/plain; charset=UTF-8"
     ];
 
-    // Compose the message body
-    $message = "New Contact Submission:\n\n";
+    // 📄 Construct email body
+    $message = "🔥 New Contact Submission:\n\n";
     $message .= "Full Name: $fullName\n";
     $message .= "Email: $email\n";
     $message .= "Phone: $phone\n";
     $message .= "City: $city\n\n";
 
+    // ✍️ Services selected
     if (!empty($websiteType)) {
         $message .= "--- Website Development ---\n";
         $message .= "Type: $websiteType\n";
@@ -121,15 +125,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message .= "Platforms: $socialPlatforms\n\n";
     }
 
-    if (!empty($dronesDetails)) {
-    $message .= "--- Drones ---\n$dronesDetails\n\n";
+    if (!empty($aiAgentService)) {
+        $message .= "--- AI Agents ---\n";
+        $message .= "Agent Service: $aiAgentService\n";
+        $message .= "Purpose / Use Case: $aiAgentPurpose\n\n";
     }
+
+    if (!empty($dronesDetails)) {
+        $message .= "--- Drones ---\n$dronesDetails\n\n";
+    }
+
     if (!empty($vehiclesDetails)) {
         $message .= "--- Vehicles ---\n$vehiclesDetails\n\n";
     }
+
     if (!empty($armorDetails)) {
         $message .= "--- Body Armor ---\n$armorDetails\n\n";
     }
+
     if (!empty($architectureDetails)) {
         $message .= "--- Architecture ---\n$architectureDetails\n\n";
     }
@@ -150,18 +163,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "Referral Name: $referralName\n";
     $message .= "Referral Contact: $referralContact\n\n";
 
-    $message .= "--- Other Notes ---\n";
-    $message .= "$inquiry\n\n";
+    $message .= "--- Other Notes ---\n$inquiry\n\n";
 
     if ($uploadedFilePath) {
-        $message .= "--- Uploaded File ---\n";
-        $message .= "File: " . basename($uploadedFilePath) . "\n";
+        $message .= "--- Uploaded File ---\nFile: " . basename($uploadedFilePath) . "\n";
     }
 
-    // Send the email
+    // 📤 Send Email
     $sent = mail($to, $subject, $message, implode("\r\n", $headers));
 
-    // Final response
+    // 🟢 Final Response
     echo json_encode([
         "status" => $sent ? "success" : "error",
         "message" => $sent ? "Your request has been sent successfully!" : "Sorry, email failed to send. Try again later."
