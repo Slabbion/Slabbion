@@ -143,103 +143,451 @@
         </div>
     </section>
 
+    <!-- Slabbion AI Agents Showcase -->
+    <section id="ai-agents" class="container py-5">
+        <h2 class="text-center mb-5 section-title glow-yellow">🧠 Slabbion AI Command Agents</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-    <!-- Services Section -->
+            <!-- ORION Agent Card -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4 text-center feature-box p-3">
+                    <img src="images/Agent Orion.png" alt="Agent Orion" class="rounded-circle mx-auto mt-3 mb-2 shadow" style="width: 80px; height: 80px;" />
+                    <div class="card-body">
+                        <h4 class="mb-2 text-warning">🛰 ORION</h4>
+                        <p class="mb-3">Primary AI logic unit. Executes commands, controls systems, and monitors live data pipelines.</p>
+                        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalOrion">
+                            View Agent
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ORION Agent Modal -->
+            <div class="modal fade" id="modalOrion" tabindex="-1" aria-labelledby="modalOrionLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content bg-dark text-light rounded">
+                        <div class="modal-body d-flex flex-column gap-4 justify-content-center">
+                            <!-- ORION Fancy Header -->
+                            <div class="d-flex align-items-center gap-4 sparkle">
+                            <img src="images/Agent Orion.png" alt="Agent Orion Portrait"
+                                class="rounded-circle border border-yellow-400 shadow" style="width: 80px; height: 80px;" />
+                            <div>
+                                <h1 class="text-3xl font-bold text-yellow-400 m-0">🛰️ Agent Orion</h1>
+                                <p class="text-yellow-200 fst-italic small m-0">Real-time ops, market scans, and tactical execution.</p>
+                            </div>
+                            </div>
+
+                            <!-- ORION Agent Description -->
+                            <p class="text-center text-warning px-3">
+                            Mainframe logic handler, memory state tracker, and AI protocol hub. Orion coordinates all internal modules,
+                            ensuring optimal decisions are made in split seconds across your custom system.
+                            </p>
+                        </div>
+
+                        <div class="modal-footer border-0 flex-column">
+                            <a href="https://slabbion.github.io/MegaXGnome/" class="btn btn-warning w-100 mb-2" target="_blank">
+                            🚀 Visit MegaXGnome Dashboard
+                            </a>
+                            <button type="button" class="btn btn-outline-light w-100" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NOVA Agent Card -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4 text-center feature-box p-3">
+                    <img src="images/Agent Nova.png" alt="Agent Nova" class="rounded-circle mx-auto mt-3 mb-2 shadow" style="width: 80px; height: 80px;" />
+                    <div class="card-body">
+                        <h4 class="mb-2 text-warning">🌌 NOVA</h4>
+                        <p class="mb-3">Logs messages, anomalies, and all system events with passive observation.</p>
+                        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalNova">
+                            View Agent
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NOVA Agent Modal -->
+            <div class="modal fade" id="modalNova" tabindex="-1" aria-labelledby="modalNovaLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content bg-dark text-light rounded">
+                        <div class="modal-body d-flex flex-column gap-4 justify-content-center">
+                            <!-- NOVA Fancy Header -->
+                            <div class="d-flex align-items-center gap-4 sparkle">
+                            <img src="images/Agent Nova.png" alt="Agent Nova Portrait"
+                                class="rounded-circle border border-yellow-400 shadow" style="width: 80px; height: 80px;" />
+                            <div>
+                                <h1 class="text-3xl font-bold text-yellow-400 m-0">🌌 Agent Nova</h1>
+                                <p class="text-yellow-200 fst-italic small m-0">Silent observer. Logs system events, anomalies, and trigger patterns.</p>
+                            </div>
+                            </div>
+
+                            <!-- NOVA Description -->
+                            <p class="text-center text-warning px-3">
+                            Nova functions as a passive observation unit, tracking every log entry, system shift, user prompt, and anomaly across your digital landscape. She watches without interference — recording, tagging, and reporting what others miss.
+                            </p>
+                        </div>
+
+                        <div class="modal-footer border-0 flex-column">
+                            <a href="https://slabbion.github.io/MegaXGnome/#nova" class="btn btn-warning w-100 mb-2" target="_blank">
+                            🚀 Visit MegaXGnome Dashboard
+                            </a>
+                            <button type="button" class="btn btn-outline-light w-100" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- HEX Agent Card -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4 text-center feature-box p-3">
+                    <img src="images/Agent Hex.png" alt="Agent Hex" class="rounded-circle mx-auto mt-3 mb-2 shadow" style="width: 80px; height: 80px;" />
+                    <div class="card-body">
+                    <h4 class="mb-2 text-warning">💠 HEX</h4>
+                    <p class="mb-3">Scans live news feeds, detects trending events, and generates anomaly alerts.</p>
+                    <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalHex">
+                        View Agent
+                    </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HEX Agent Modal -->
+            <div class="modal fade" id="modalHex" tabindex="-1" aria-labelledby="modalHexLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content bg-dark text-light rounded">
+                        <div class="modal-body d-flex flex-column gap-4 justify-content-center">
+                            <!-- HEX Fancy Header -->
+                            <div class="d-flex align-items-center gap-4 sparkle">
+                                <img src="images/Agent Hex.png" alt="Agent Hex Portrait"
+                                    class="rounded-circle border border-yellow-400 shadow" style="width: 80px; height: 80px;" />
+                                <div>
+                                    <h1 class="text-3xl font-bold text-yellow-400 m-0">💠 Agent HEX</h1>
+                                    <p class="text-yellow-200 fst-italic small m-0">News radar and anomaly detector. Spots the signals before they spike.</p>
+                                </div>
+                            </div>
+
+                            <!-- HEX Description -->
+                            <p class="text-center text-warning px-3">
+                            Hex monitors real-time news streams, headlines, and metadata across the web. She analyzes tone, detects surges,
+                            and identifies patterns before they go viral — arming your system with early warning intelligence.
+                            </p>
+                        </div>
+
+                        <div class="modal-footer border-0 flex-column">
+                            <a href="https://slabbion.github.io/MegaXGnome/#hex" class="btn btn-warning w-100 mb-2" target="_blank">
+                            🚀 Visit MegaXGnome Dashboard
+                            </a>
+                            <button type="button" class="btn btn-outline-light w-100" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SOLIS Agent Card -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4 text-center feature-box p-3">
+                    <img src="images/Agent Solis.png" alt="Agent Solis" class="rounded-circle mx-auto mt-3 mb-2 shadow" style="width: 80px; height: 80px;" />
+                    <div class="card-body">
+                        <h4 class="mb-2 text-warning">☀️ SOLIS</h4>
+                        <p class="mb-3">Delivers sacred insights, quotes, and reflection prompts daily.</p>
+                        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalSolis">
+                            View Agent
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOLIS Agent Modal -->
+            <div class="modal fade" id="modalSolis" tabindex="-1" aria-labelledby="modalSolisLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content bg-dark text-light rounded">
+                        <div class="modal-body d-flex flex-column gap-4 justify-content-center">
+                            <!-- SOLIS Header -->
+                            <div class="d-flex align-items-center gap-4 sparkle">
+                            <img src="images/Agent Solis.png" alt="Agent Solis Portrait"
+                                class="rounded-circle border border-yellow-400 shadow" style="width: 80px; height: 80px;" />
+                            <div>
+                                <h1 class="text-3xl font-bold text-yellow-400 m-0">☀️ Agent SOLIS</h1>
+                                <p class="text-yellow-200 fst-italic small m-0">Oracle of light. Delivers scripture, balance, and clarity.</p>
+                            </div>
+                            </div>
+
+                            <!-- SOLIS Description -->
+                            <p class="text-center text-warning px-3">
+                            Solis is the spiritual thread woven into the system — delivering quotes from ancient texts, reflective prompts,
+                            and reminders of higher purpose. Whether you're building or leading, Solis restores alignment.
+                            </p>
+                        </div>
+
+                        <div class="modal-footer border-0 flex-column">
+                            <a href="https://slabbion.github.io/MegaXGnome/#solis" class="btn btn-warning w-100 mb-2" target="_blank">
+                            🔮 Visit MegaXGnome Dashboard
+                            </a>
+                            <button type="button" class="btn btn-outline-light w-100" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- VANTA Agent Card -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4 text-center feature-box p-3">
+                    <img src="images/Agent Vanta.png" alt="Agent Vanta" class="rounded-circle mx-auto mt-3 mb-2 shadow" style="width: 80px; height: 80px;" />
+                    <div class="card-body">
+                        <h4 class="mb-2 text-warning">🖤 VANTA</h4>
+                        <p class="mb-3">Private agent for journaling, reflection, and one-on-one grounding.</p>
+                        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalVanta">
+                            View Agent
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VANTA Agent Modal -->
+            <div class="modal fade" id="modalVanta" tabindex="-1" aria-labelledby="modalVantaLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content bg-dark text-light rounded">
+                        <div class="modal-body d-flex flex-column gap-4 justify-content-center">
+                            <!-- VANTA Header -->
+                            <div class="d-flex align-items-center gap-4 sparkle">
+                            <img src="images/Agent Vanta.png" alt="Agent Vanta Portrait"
+                                class="rounded-circle border border-yellow-400 shadow" style="width: 80px; height: 80px;" />
+                            <div>
+                                <h1 class="text-3xl font-bold text-yellow-400 m-0">🖤 Agent VANTA</h1>
+                                <p class="text-yellow-200 fst-italic small m-0">Inner world navigator. Deep journaling, personal clarity, and grounded space.</p>
+                            </div>
+                            </div>
+
+                            <!-- VANTA Description -->
+                            <p class="text-center text-warning px-3">
+                            Vanta is your personal reflective space. Whether you're decompressing after chaos, exploring patterns in emotion, 
+                            or journaling toward clarity — she listens. Private. Encrypted. Always grounded.
+                            </p>
+                        </div>
+
+                        <div class="modal-footer border-0 flex-column">
+                            <a href="https://slabbion.github.io/MegaXGnome/#vanta" class="btn btn-warning w-100 mb-2" target="_blank">
+                            🖋️ Visit MegaXGnome Dashboard
+                            </a>
+                            <button type="button" class="btn btn-outline-light w-100" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ZENITH Agent Card -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4 text-center feature-box p-3">
+                    <img src="images/Agent Zenith.png" alt="Agent Zenith" class="rounded-circle mx-auto mt-3 mb-2 shadow" style="width: 80px; height: 80px;" />
+                    <div class="card-body">
+                        <h4 class="mb-2 text-warning">🔱 ZENITH</h4>
+                        <p class="mb-3">The master node. Synthesizes data across all agents into cosmic clarity.</p>
+                        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalZenith">
+                            View Agent
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ZENITH Agent Modal -->
+            <div class="modal fade" id="modalZenith" tabindex="-1" aria-labelledby="modalZenithLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content bg-dark text-light rounded">
+                        <div class="modal-body d-flex flex-column gap-4 justify-content-center">
+                            <!-- ZENITH Header -->
+                            <div class="d-flex align-items-center gap-4 sparkle">
+                            <img src="images/Agent Zenith.png" alt="Agent Zenith Portrait"
+                                class="rounded-circle border border-yellow-400 shadow" style="width: 80px; height: 80px;" />
+                            <div>
+                                <h1 class="text-3xl font-bold text-yellow-400 m-0">🔱 Agent ZENITH</h1>
+                                <p class="text-yellow-200 fst-italic small m-0">Celestial synchronizer. Synthesizes multi-agent intelligence into unified flow.</p>
+                            </div>
+                            </div>
+
+                            <!-- ZENITH Description -->
+                            <p class="text-center text-warning px-3">
+                            Zenith is the sovereign core — aggregating knowledge, strategies, and observations from Orion, Nova, Hex, Vanta, and Solis. 
+                            She is the bridge between subsystems, transforming scattered signals into luminous insight.
+                            </p>
+                        </div>
+
+                        <div class="modal-footer border-0 flex-column">
+                            <a href="https://slabbion.github.io/MegaXGnome/" class="btn btn-warning w-100 mb-2" target="_blank">
+                            🌐 Visit MegaXGnome Dashboard
+                            </a>
+                            <button type="button" class="btn btn-outline-light w-100" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- 🔧 Services / Stack Showcase -->
     <section class="container py-5">
         <div class="container">
             <h2 class="mb-5 text-center section-title glow-yellow">🛠️ Powered by the Best Tools</h2>
+
             <div class="row g-4 text-center">
-                <div class="col-md-3">
-                    <div class="feature-box h-100">
-                    <i class="fab fa-laravel fa-3x text-danger glow-icon mb-3"></i>
-                    <h5>Laravel</h5>
-                    <p>Fast, secure back-end systems built to scale.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="feature-box h-100">
-                    <i class="fab fa-react fa-3x text-info glow-icon mb-3"></i>
-                    <h5>React</h5>
-                    <p>Modern, dynamic UIs your users will love.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="feature-box h-100">
-                    <i class="fab fa-node-js fa-3x text-success glow-icon mb-3"></i>
-                    <h5>Node.js</h5>
-                    <p>Real-time experiences with powerful APIs.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="feature-box h-100">
-                    <i class="fas fa-cloud fa-3x text-primary glow-icon mb-3"></i>
-                    <h5>Cloud First</h5>
-                    <p>Deploy on AWS, Azure, or your custom stack.</p>
-                    </div>
-                </div>
 
-                <div class="col-md-3">
-                    <div class="feature-box h-100">
-                    <i class="fab fa-python fa-3x text-warning glow-icon mb-3"></i>
-                    <h5>Python</h5>
-                    <p>Data science, automation, and clean scripting.</p>
-                    </div>
+            <!-- Laravel -->
+            <div class="col-md-3">
+                <div class="feature-box h-100">
+                <i class="fab fa-laravel fa-3x text-danger glow-icon mb-3"></i>
+                <h5>Laravel</h5>
+                <p>Modern PHP with artisan power & backend elegance.</p>
                 </div>
-                <div class="col-md-3">
-                    <div class="feature-box h-100">
-                    <i class="fab fa-js-square fa-3x text-warning glow-icon mb-3"></i>
-                    <h5>JavaScript</h5>
-                    <p>The language of the web — everywhere.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="feature-box h-100">
-                    <i class="fab fa-php fa-3x text-secondary glow-icon mb-3"></i>
-                    <h5>PHP</h5>
-                    <p>Tried and true web scripting powerhouse.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="feature-box h-100">
-                    <i class="fab fa-html5 fa-3x text-danger glow-icon mb-3"></i>
-                    <h5>HTML5</h5>
-                    <p>Semantic, accessible, modern markup.</p>
-                    </div>
-                </div>
+            </div>
 
-                <div class="col-md-3">
-                    <div class="feature-box h-100">
-                    <i class="fab fa-css3-alt fa-3x text-primary glow-icon mb-3"></i>
-                    <h5>CSS3</h5>
-                    <p>Style, animation, layout — fully responsive.</p>
-                    </div>
+            <!-- React -->
+            <div class="col-md-3">
+                <div class="feature-box h-100">
+                <i class="fab fa-react fa-3x text-info glow-icon mb-3"></i>
+                <h5>React</h5>
+                <p>Fast, reactive interfaces that users love to use.</p>
                 </div>
-                <div class="col-md-3">
-                    <div class="feature-box h-100">
-                    <i class="fab fa-git-alt fa-3x text-danger glow-icon mb-3"></i>
-                    <h5>Git</h5>
-                    <p>Version control for collaborative power.</p>
-                    </div>
+            </div>
+
+            <!-- Node.js -->
+            <div class="col-md-3">
+                <div class="feature-box h-100">
+                <i class="fab fa-node-js fa-3x text-success glow-icon mb-3"></i>
+                <h5>Node.js</h5>
+                <p>Real-time APIs, scalable services, unstoppable speed.</p>
                 </div>
-                <div class="col-md-3">
-                    <div class="feature-box h-100">
-                    <i class="fab fa-docker fa-3x text-info glow-icon mb-3"></i>
-                    <h5>Docker</h5>
-                    <p>Ship apps fast with containerized builds.</p>
-                    </div>
+            </div>
+
+            <!-- Python -->
+            <div class="col-md-3">
+                <div class="feature-box h-100">
+                <i class="fab fa-python fa-3x text-warning glow-icon mb-3"></i>
+                <h5>Python</h5>
+                <p>Automation, AI, scripting, bots & data science.</p>
                 </div>
-                <div class="col-md-3">
-                    <div class="feature-box h-100">
-                    <i class="fab fa-aws fa-3x text-warning glow-icon mb-3"></i>
-                    <h5>AWS</h5>
-                    <p>Scale anything, deploy globally in minutes.</p>
-                    </div>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="col-md-3">
+                <div class="feature-box h-100">
+                <i class="fab fa-js-square fa-3x text-warning glow-icon mb-3"></i>
+                <h5>JavaScript</h5>
+                <p>Universal web language, dynamic by nature.</p>
                 </div>
+            </div>
+
+            <!-- PHP -->
+            <div class="col-md-3">
+                <div class="feature-box h-100">
+                <i class="fab fa-php fa-3x text-secondary glow-icon mb-3"></i>
+                <h5>PHP</h5>
+                <p>Reliable backbones powering global platforms.</p>
+                </div>
+            </div>
+
+            <!-- HTML5 -->
+            <div class="col-md-3">
+                <div class="feature-box h-100">
+                <i class="fab fa-html5 fa-3x text-danger glow-icon mb-3"></i>
+                <h5>HTML5</h5>
+                <p>Clean, semantic, responsive structure.</p>
+                </div>
+            </div>
+
+            <!-- CSS3 -->
+            <div class="col-md-3">
+                <div class="feature-box h-100">
+                <i class="fab fa-css3-alt fa-3x text-primary glow-icon mb-3"></i>
+                <h5>CSS3</h5>
+                <p>Style, animation, layout mastery.</p>
+                </div>
+            </div>
+
+            <!-- Tailwind CSS -->
+            <div class="col-md-3">
+                <div class="feature-box h-100">
+                <i class="fas fa-wind fa-3x text-cyan-300 glow-icon mb-3"></i>
+                <h5>Tailwind</h5>
+                <p>Utility-first styling for modern dev speed.</p>
+                </div>
+            </div>
+
+            <!-- Git -->
+            <div class="col-md-3">
+                <div class="feature-box h-100">
+                <i class="fab fa-git-alt fa-3x text-danger glow-icon mb-3"></i>
+                <h5>Git</h5>
+                <p>Collaborate, version, branch — together.</p>
+                </div>
+            </div>
+
+            <!-- Docker -->
+            <div class="col-md-3">
+                <div class="feature-box h-100">
+                <i class="fab fa-docker fa-3x text-info glow-icon mb-3"></i>
+                <h5>Docker</h5>
+                <p>Deploy containers with clean environments.</p>
+                </div>
+            </div>
+
+            <!-- AWS -->
+            <div class="col-md-3">
+                <div class="feature-box h-100">
+                <i class="fab fa-aws fa-3x text-warning glow-icon mb-3"></i>
+                <h5>AWS</h5>
+                <p>Scale across the cloud with global reach.</p>
+                </div>
+            </div>
+
+            <!-- MongoDB -->
+            <div class="col-md-3">
+                <div class="feature-box h-100">
+                <i class="fas fa-database fa-3x text-green-400 glow-icon mb-3"></i>
+                <h5>MongoDB</h5>
+                <p>Flexible, document-based NoSQL powerhouse.</p>
+                </div>
+            </div>
+
+            <!-- MySQL -->
+            <div class="col-md-3">
+                <div class="feature-box h-100">
+                <i class="fas fa-server fa-3x text-blue-300 glow-icon mb-3"></i>
+                <h5>MySQL</h5>
+                <p>Relational DB strength — stable, secure, proven.</p>
+                </div>
+            </div>
+
+            <!-- TypeScript -->
+            <div class="col-md-3">
+                <div class="feature-box h-100">
+                <i class="fas fa-code fa-3x text-sky-300 glow-icon mb-3"></i>
+                <h5>TypeScript</h5>
+                <p>JavaScript evolved with safety & precision.</p>
+                </div>
+            </div>
+
+            <!-- AI & LLM Integration -->
+            <div class="col-md-3">
+                <div class="feature-box h-100">
+                <i class="fas fa-brain fa-3x text-purple-300 glow-icon mb-3"></i>
+                <h5>AI / LLMs</h5>
+                <p>Agents powered by OpenAI, LangChain, custom GPTs.</p>
+                </div>
+            </div>
+
             </div>
         </div>
     </section>
 
-        <!-- IMAGE SCROLLER -->
+    <!-- IMAGE SCROLLER -->
     <section id="image-scroller">
         <!-- CAROUSEL SCROLLER -->
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -355,32 +703,67 @@
         </div>
     </section>
 
-    <!-- Client Impact Stories -->
-    <section id="testimonials" class="container py-5">
+    <!-- 💡 Custom Solutions Overview -->
+    <section id="custom-solutions" class="container py-5">
         <div class="container">
-            <h2 class="mb-5 text-center section-title glow-yellow">📈 Real Results, Real Clients</h2>
+            <h2 class="mb-5 text-center section-title glow-yellow">🚧 What We Build at Slabbion</h2>
+
             <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card feature-box h-100">
-                <h5>🛒 LocalMart</h5>
-                <p>E-commerce</p>
-                <p>"Revenue tripled after Slabbion redesigned our store and integrated live inventory sync."</p>
+
+                <!-- Web Systems -->
+                <div class="col-md-4">
+                    <div class="card feature-box h-100">
+                    <h5>🌐 Smart Web Systems</h5>
+                    <p>Next-gen websites, portals & dashboards</p>
+                    <p>From beautiful frontends to complex backend workflows, we build entire ecosystems — powered by Agents like <strong>Orion</strong>.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card feature-box h-100">
-                <h5>🏥 Mediform</h5>
-                <p>Healthcare CRM</p>
-                <p>"Appointments, billing, and patient updates — automated and seamless."</p>
+
+                <!-- E-commerce Engines -->
+                <div class="col-md-4">
+                    <div class="card feature-box h-100">
+                    <h5>🛒 E-Commerce Engines</h5>
+                    <p>Storefronts, carts & stock sync</p>
+                    <p>Our systems scale with your catalog, integrating live product feeds, secure payments, and delivery automation via <strong>Nova</strong>.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card feature-box h-100">
-                <h5>🎓 LearnLab</h5>
-                <p>Education</p>
-                <p>"Our LMS serves 4,000+ students globally — fast, secure, and intuitive."</p>
+
+                <!-- Custom CRMs -->
+                <div class="col-md-4">
+                    <div class="card feature-box h-100">
+                    <h5>📊 Custom CRMs & Dashboards</h5>
+                    <p>Control centers for your data</p>
+                    <p>We design CRM systems tailored to your business, enhanced by <strong>Hex</strong> for live data, automation, and signal processing.</p>
+                    </div>
                 </div>
-            </div>
+
+                <!-- Branding Systems -->
+                <div class="col-md-4">
+                    <div class="card feature-box h-100">
+                    <h5>🎨 Branding Systems</h5>
+                    <p>Visual identity, UI & motion design</p>
+                    <p>From logos to landing pages, <strong>Solis</strong> ensures every pixel reflects your story with spiritual precision and elegance.</p>
+                    </div>
+                </div>
+
+                <!-- Automation & Agents -->
+                <div class="col-md-4">
+                    <div class="card feature-box h-100">
+                    <h5>🤖 Automation & AI Agents</h5>
+                    <p>Custom logic, bots & AI dashboards</p>
+                    <p>Deploy private Agents like <strong>Vanta</strong> to assist with journaling, user interaction, or internal task automation across your platform.</p>
+                    </div>
+                </div>
+
+                <!-- Secure Deployments -->
+                <div class="col-md-4">
+                    <div class="card feature-box h-100">
+                    <h5>☁️ Cloud Deployments</h5>
+                    <p>Secure, scalable infrastructure</p>
+                    <p>Hosted on AWS, Vercel, GitHub Pages — or your private cloud — <strong>Zenith</strong> coordinates build, sync, and deploy processes for you.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -390,72 +773,124 @@
         <div class="container">
             <h2 class="mb-5 text-center section-title glow-yellow">🚀 How We Deliver Excellence</h2>
             <div class="row text-center g-4">
-                <div class="col-md-4 col-lg-2">
-                    <div class="feature-box h-100">
-                    <i class="fas fa-search fa-2x mb-3 text-warning glow-icon"></i>
-                    <h6>1. Discover</h6>
-                    <p>Understand your vision, audience, and business goals.</p>
-                    </div>
+
+            <!-- Discover -->
+            <div class="col-md-3 col-lg-3">
+                <div class="feature-box h-100">
+                <i class="fas fa-search fa-2x mb-3 text-yellow-400 glow-icon"></i>
+                <h6>1. Discover</h6>
+                <p>Understand your vision, pain points, and future goals.</p>
                 </div>
-                <div class="col-md-4 col-lg-2">
-                    <div class="feature-box h-100">
-                    <i class="fas fa-brain fa-2x mb-3 text-primary glow-icon"></i>
-                    <h6>2. Strategize</h6>
-                    <p>Craft smart, scalable solutions with you, not for you.</p>
-                    </div>
+            </div>
+
+            <!-- Strategize -->
+            <div class="col-md-3 col-lg-3">
+                <div class="feature-box h-100">
+                <i class="fas fa-brain fa-2x mb-3 text-blue-300 glow-icon"></i>
+                <h6>2. Strategize</h6>
+                <p>Design an action plan, guided by agent insights and your market reality.</p>
                 </div>
-                <div class="col-md-4 col-lg-2">
-                    <div class="feature-box h-100">
-                    <i class="fas fa-pencil-ruler fa-2x mb-3 text-info glow-icon"></i>
-                    <h6>3. Design</h6>
-                    <p>UX-first wireframes, visual identity, and brand clarity.</p>
-                    </div>
+            </div>
+
+            <!-- Design -->
+            <div class="col-md-3 col-lg-3">
+                <div class="feature-box h-100">
+                <i class="fas fa-pencil-ruler fa-2x mb-3 text-cyan-300 glow-icon"></i>
+                <h6>3. Design</h6>
+                <p>Map the user flow, build visual identities, and prototype UI/UX flows.</p>
                 </div>
-                <div class="col-md-4 col-lg-2">
-                    <div class="feature-box h-100">
-                    <i class="fas fa-code fa-2x mb-3 text-success glow-icon"></i>
-                    <h6>4. Build</h6>
-                    <p>Modern stacks, clean code, continuous testing.</p>
-                    </div>
+            </div>
+
+            <!-- Build -->
+            <div class="col-md-3 col-lg-3">
+                <div class="feature-box h-100">
+                <i class="fas fa-code fa-2x mb-3 text-green-400 glow-icon"></i>
+                <h6>4. Build</h6>
+                <p>Develop modular, scalable systems with clean code and integrated agents.</p>
                 </div>
-                <div class="col-md-4 col-lg-2">
-                    <div class="feature-box h-100">
-                    <i class="fas fa-rocket fa-2x mb-3 text-danger glow-icon"></i>
-                    <h6>5. Launch</h6>
-                    <p>Zero-downtime deploys, SEO setup, and live QA.</p>
-                    </div>
+            </div>
+
+            <!-- Launch -->
+            <div class="col-md-3 col-lg-3">
+                <div class="feature-box h-100">
+                <i class="fas fa-rocket fa-2x mb-3 text-pink-400 glow-icon"></i>
+                <h6>5. Launch</h6>
+                <p>Zero-downtime deployment with SEO, analytics, and QA checklists.</p>
                 </div>
-                <div class="col-md-4 col-lg-2">
-                    <div class="feature-box h-100">
-                    <i class="fas fa-hands-helping fa-2x mb-3 text-secondary glow-icon"></i>
-                    <h6>6. Support</h6>
-                    <p>Ongoing care, analytics, scaling, and performance tuning.</p>
-                    </div>
+            </div>
+
+            <!-- Support -->
+            <div class="col-md-3 col-lg-3">
+                <div class="feature-box h-100">
+                <i class="fas fa-tools fa-2x mb-3 text-gray-300 glow-icon"></i>
+                <h6>6. Support</h6>
+                <p>Monitor uptime, fix issues fast, and ensure long-term system health.</p>
                 </div>
+            </div>
+
+            <!-- Automate -->
+            <div class="col-md-3 col-lg-3">
+                <div class="feature-box h-100">
+                <i class="fas fa-robot fa-2x mb-3 text-indigo-300 glow-icon"></i>
+                <h6>7. Automate</h6>
+                <p>Deploy custom AI agents, cron tasks, and process triggers to save time.</p>
+                </div>
+            </div>
+
+            <!-- Optimize -->
+            <div class="col-md-3 col-lg-3">
+                <div class="feature-box h-100">
+                <i class="fas fa-chart-line fa-2x mb-3 text-orange-300 glow-icon"></i>
+                <h6>8. Optimize</h6>
+                <p>Continuously improve speed, UX, and conversions with real data feedback.</p>
+                </div>
+            </div>
+
             </div>
         </div>
     </section>
+
 
     <!-- Contact / Custom Requests -->
     <section class="py-5 text-center">
         <div class="container">
             <h2 class="mb-4 section-title glow-yellow">⚙️ Custom Use Cases</h2>
             <div class="row g-4 mb-4">
-                <div class="col-md-4">
-                    <h5>📦 Logistics Tracker</h5>
-                    <p>GPS-powered delivery timelines and performance dashboards.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>🏫 School Portal</h5>
-                    <p>Grades, messages, class scheduling — in one place.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>🧮 Invoice Automation</h5>
-                    <p>Auto-email PDFs + sync with your accounting system.</p>
-                </div>
+
+            <div class="col-md-4">
+                <h5>🧠 Agent Dashboards</h5>
+                <p>Real-time UI dashboards powered by autonomous agents like Orion, Nova, and Hex.</p>
+            </div>
+
+            <div class="col-md-4">
+                <h5>🗂️ Command Centers</h5>
+                <p>Web-based terminals to input, monitor, and execute live AI or API instructions.</p>
+            </div>
+
+            <div class="col-md-4">
+                <h5>💬 Conversational Frontends</h5>
+                <p>Custom chat systems for journaling, client intake, or DM-style interaction.</p>
+            </div>
+
+            <div class="col-md-4">
+                <h5>🔁 Workflow Automation</h5>
+                <p>Trigger pipelines, smart reminders, agent notifications, and backend scripts.</p>
+            </div>
+
+            <div class="col-md-4">
+                <h5>📊 Data Insight Panels</h5>
+                <p>Monitor patterns, detect anomalies, and visualize behavior in clean UI layers.</p>
+            </div>
+
+            <div class="col-md-4">
+                <h5>🎨 Brand Systems</h5>
+                <p>Custom web templates, visual identities, and design frameworks — modular & bold.</p>
+            </div>
+
             </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="py-4 text-center footer-glow">
