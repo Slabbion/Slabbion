@@ -148,19 +148,19 @@
     <section class="container py-5">
         <h2 class="text-center mb-4">Contact & Project Inquiry</h2>
         <h2 class="text-center mb-4">Pick Multiple Services — We’ve Got You Covered</h2>
-        <form method="post" action="process_form.php">
-        <!-- Form Submission Confirmation -->
-        <form id="contactForm" enctype="multipart/form-data" method="post">
+        <!-- Contact Form -->
+        <form id="contactForm" action="process_form.php" method="post" enctype="multipart/form-data">
+
 
             <!-- Full Name & Email -->
             <div class="row mb-3">
                 <div class="col-md-6">
                     <label for="fullName" class="form-label">Full Name*</label>
-                    <input type="text" class="form-control" id="fullName" name="fullName" required>
+                    <input type="text" class="form-control" name="fullName" id="fullName" autocomplete="name" required>
                 </div>
                 <div class="col-md-6">
                     <label for="email" class="form-label">Email*</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                    <input type="email" class="form-control" name="email" id="email" autocomplete="email" required>
                 </div>
             </div>
 
@@ -168,19 +168,20 @@
             <div class="row mb-3">
                 <div class="col-md-6">
                     <label for="phone" class="form-label">Phone Number*</label>
-                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                    <input type="tel" class="form-control" name="phone" id="phone" autocomplete="tel" required>
                 </div>
                 <div class="col-md-6">
                     <label for="city" class="form-label">City</label>
-                    <input type="text" class="form-control" id="city" name="city">
+                    <input type="text" class="form-control" name="city" id="city" autocomplete="address-level2">
                 </div>
             </div>
+
 
             <!-- Service Checkboxes -->
             <h5 class="mb-3">What services are you interested in?</h5>
 
             <!-- WebDev Section -->
-            <div class="form-check">
+            <div class="form-check glow-blue">
                 <input class="form-check-input" type="checkbox" value="webdev" id="webDevCheck">
                 <label class="form-check-label" for="webDevCheck">
                     <i class="fas fa-globe"></i> Website Development
@@ -248,8 +249,8 @@
             </script>
 
             <!-- Graphic Design Section -->
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="graphics" id="graphicDesignCheck">
+            <div class="form-check glow-cyan">
+                <input class="form-check-input glow-cyan" type="checkbox" value="graphics" id="graphicDesignCheck">
                 <label class="form-check-label" for="graphicDesignCheck">
                     <i class="fas fa-paint-brush"></i> Graphic Design
                 </label>
@@ -283,7 +284,7 @@
             </div>
 
             <!--Social Media Package Section -->
-            <div class="form-check">
+            <div class="form-check glow-green">
                 <input class="form-check-input" type="checkbox" value="social" id="socialMediaCheck">
                 <label class="form-check-label" for="socialMediaCheck">
                     <i class="fas fa-share-alt"></i> Social Media Management
@@ -314,10 +315,10 @@
             </div>
 
             <!-- Drone Section -->
-            <div class="form-check">
+            <div class="form-check glow-violet">
                 <input class="form-check-input" type="checkbox" value="drones" id="dronesCheck">
                 <label class="form-check-label" for="dronesCheck">
-                    <i class="fas fa-helicopter"></i> Drone Services
+                    <i class="fas fa-helicopter"></i> Drones
                 </label>
             </div>
             <div id="dronesSection" style="display: none;">
@@ -331,7 +332,7 @@
             </div>
 
             <!-- Vehicles Section -->
-            <div class="form-check">
+            <div class="form-check glow-orange">
                 <input class="form-check-input" type="checkbox" value="vehicles" id="vehiclesCheck">
                 <label class="form-check-label" for="vehiclesCheck">
                     <i class="fas fa-car"></i> Vehicles
@@ -341,20 +342,21 @@
                 <label class="form-label mt-3">Vehicle Type</label>
                 <select class="form-control mb-3">
                     <option>Off-Road Buggy</option>
-                    <option>On-Road Performance</option>
+                    <option>On-Road Buggy</option>
+                    <option>Off-Road Bike</option>
                     <option>Survival/Apocalypse Build</option>
                     <option>Concept Design</option>
                 </select>
             </div>
 
             <!-- Body Armor Section -->
-            <div class="form-check">
+            <div class="form-check glow-deepred">
                 <input class="form-check-input" type="checkbox" value="armor" id="armorCheck">
                 <label class="form-check-label" for="armorCheck">
-                    <i class="fas fa-shield-alt"></i> Body Armor / Exosuits
+                    <i class="fas fa-shield-alt"></i> Body Armor
                 </label>
             </div>
-                <div id="armorSection" style="display: none;">
+            <div id="armorSection" style="display: none;">
                 <label class="form-label mt-3">Armor Needs</label>
                 <select class="form-control mb-3">
                     <option>Tactical Armor</option>
@@ -365,10 +367,10 @@
             </div>
 
             <!-- Architecture Section -->
-            <div class="form-check">
+            <div class="form-check glow-teal">
                 <input class="form-check-input" type="checkbox" value="architecture" id="architectureCheck">
                 <label class="form-check-label" for="architectureCheck">
-                    <i class="fas fa-drafting-compass"></i> Architecture & Spatial Design
+                    <i class="fas fa-drafting-compass"></i> Architecture & Design
                 </label>
             </div>
             <div id="architectureSection" style="display: none;">
@@ -382,7 +384,7 @@
             </div>
 
             <!-- Custom Solutions Section -->
-            <div class="form-check">
+            <div class="form-check glow-yellow">
                 <input class="form-check-input" type="checkbox" value="custom" id="customSolutionsCheck">
                 <label class="form-check-label" for="customSolutionsCheck">
                     <i class="fas fa-tools"></i> Custom Solutions
@@ -458,7 +460,7 @@
             </div> -->
 
             <!-- Referral Section -->
-            <section class="mt-4 border rounded p-3">
+            <section class="feature-box mt-4 border rounded p-3">
                 <h4 class="mb-3">Referral Information</h4>
 
                 <div class="col-md-12 mb-3">
