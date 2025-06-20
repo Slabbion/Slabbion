@@ -424,6 +424,16 @@ body.light-mode .navbar-toggler .navbar-toggler-icon {
     letter-spacing: 1px;
 }
 
+/* === Agents === */
+.glow-gold {
+    color: #fff;
+    text-shadow: 
+        0 0 10px #ffd700,
+        0 0 20px #ffd700;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
 /* === Vehicles === */
 .glow-orange {
     color: #fff;
@@ -468,8 +478,8 @@ body.light-mode .navbar-toggler .navbar-toggler-icon {
 .glow-yellow {
     color: #fff;
     text-shadow: 
-        0 0 10px #ffc107,
-        0 0 20px #ffc107;
+        0 0 10px #ffde59,
+        0 0 20px #ffde59;
     font-weight: bold;
     letter-spacing: 1px;
 }
