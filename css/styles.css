@@ -494,6 +494,26 @@ body.light-mode .navbar-toggler .navbar-toggler-icon {
     letter-spacing: 1px;
 }
 
+/* Rarity-based level colors Leaderboard */
+.bg-level1 { background-color: #6c757d; }   /* Gray – Common */
+.bg-level2 { background-color: #28a745; }   /* Green – Uncommon */
+.bg-level3 { background-color: #007bff; }   /* Blue – Rare */
+.bg-level4 { background-color: #6f42c1; }   /* Purple – Epic */
+.bg-level5 { background-color: #fd7e14; }   /* Orange – Legendary */
+
+/* Violet glow & button theme */
+.text-violet { color: #b57cff !important; }
+.border-violet { border-color: #b57cff !important; }
+.btn-outline-violet {
+  color: #b57cff; border-color: #b57cff;
+}
+.btn-outline-violet:hover {
+  background-color: #b57cff; color: #fff;
+}
+.glow-violet {
+  text-shadow: 0 0 6px #cdb5ff, 0 0 10px #b57cff;
+}
+
 
 /* === Testimonials Card Hover === */
 #testimonials .card {
