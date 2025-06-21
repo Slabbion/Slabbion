@@ -129,12 +129,192 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact Us</a>
                             </li>
+
+                            <!-- Leaderboard Modal Trigger -->
+                            <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#leaderboardModal">
+                                Leaderboard
+                            </a>
+                            </li>
+
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
     </section>
+
+    <!-- 🏆 Slabbion Leaderboard Modal -->
+    <div class="modal fade" id="leaderboardModal" tabindex="-1" aria-labelledby="leaderboardModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content glass-card border border-violet bg-dark bg-opacity-75 text-light">
+
+                <!-- Modal Header -->
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-violet glow-violet" id="leaderboardModalLabel">
+                    🏆 Slabbion Leaderboard
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+
+                    <!-- Scrollable Leaderboard Table -->
+                    <div class="table-responsive mb-5" style="max-height: 400px; overflow-y: auto;">
+                    <table class="table table-dark table-hover table-borderless align-middle shadow-sm rounded">
+                        <thead class="sticky-top" style="background: rgba(111, 66, 193, 0.3);">
+                        <tr class="text-violet">
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Division</th>
+                            <th>Points</th>
+                            <th>Level</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Nova</td>
+                            <td>Observation Logs</td>
+                            <td>987</td>
+                            <td><span class="badge bg-level5">Level 5</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Orion</td>
+                            <td>Command Center</td>
+                            <td>870</td>
+                            <td><span class="badge bg-level5">Level 5</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Vanta</td>
+                            <td>Journaling Agent</td>
+                            <td>720</td>
+                            <td><span class="badge bg-level4">Level 4</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Hex</td>
+                            <td>News & Intel</td>
+                            <td>640</td>
+                            <td><span class="badge bg-level4">Level 4</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Solis</td>
+                            <td>Spiritual Uplink</td>
+                            <td>590</td>
+                            <td><span class="badge bg-level4">Level 4</span></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Zenith</td>
+                            <td>Master Node</td>
+                            <td>555</td>
+                            <td><span class="badge bg-level4">Level 4</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <!-- ✨ Points System Overview -->
+                    <div class="mb-4 p-4 rounded text-light" style="background: rgba(111, 66, 193, 0.1); border: 1px solid #6f42c1;">
+                    <h5 class="text-violet glow-violet mb-3">📊 Slabbion Point System</h5>
+                    <ul class="mb-3">
+                        <li><strong>+1 Point</strong> — Referral for a completed basic project</li>
+                        <li><strong>+2–5 Points</strong> — Premium package referrals or large contributions</li>
+                        <li><strong>+1 Point</strong> — Visual/media/design contributions</li>
+                        <li><strong>+1 Point</strong> — Verified outreach, partnerships, or insights</li>
+                    </ul>
+                    <p class="text-muted mb-0">⚠️ Points only awarded after project completion and payment confirmation.</p>
+                    </div>
+
+                    <!-- 🧬 Level Breakdown (Collapsible Cards) -->
+                    <div class="accordion" id="levelBreakdown">
+
+                    <!-- Level 1 -->
+                    <div class="accordion-item bg-level1 text-white border-0">
+                        <h2 class="accordion-header" id="lvl1Heading">
+                        <button class="accordion-button collapsed bg-level1 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl1Collapse">
+                            🧪 Level 1: Common Initiate (0–49 Points)
+                        </button>
+                        </h2>
+                        <div id="lvl1Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
+                        <div class="accordion-body">
+                            New explorers of the Slabbion realm. Eligible for early access perks and shoutouts.
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Level 2 -->
+                    <div class="accordion-item bg-level2 text-white border-0">
+                        <h2 class="accordion-header" id="lvl2Heading">
+                        <button class="accordion-button collapsed bg-level2 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl2Collapse">
+                            🛠 Level 2: Uncommon Builder (50–149 Points)
+                        </button>
+                        </h2>
+                        <div id="lvl2Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
+                        <div class="accordion-body">
+                            Solid contributors with multiple successful contributions. Featured on website credits.
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Level 3 -->
+                    <div class="accordion-item bg-level3 text-white border-0">
+                        <h2 class="accordion-header" id="lvl3Heading">
+                        <button class="accordion-button collapsed bg-level3 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl3Collapse">
+                            🧠 Level 3: Rare Strategist (150–299 Points)
+                        </button>
+                        </h2>
+                        <div id="lvl3Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
+                        <div class="accordion-body">
+                            Tactical minds shaping projects or creative direction. Eligible for agent dashboard testing.
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Level 4 -->
+                    <div class="accordion-item bg-level4 text-white border-0">
+                        <h2 class="accordion-header" id="lvl4Heading">
+                        <button class="accordion-button collapsed bg-level4 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl4Collapse">
+                            🛡 Level 4: Epic Sentinel (300–599 Points)
+                        </button>
+                        </h2>
+                        <div id="lvl4Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
+                        <div class="accordion-body">
+                            Leaders and strategists that guide Slabbion divisions. Granted semi-private access to tools and briefs.
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Level 5 -->
+                    <div class="accordion-item bg-level5 text-white border-0">
+                        <h2 class="accordion-header" id="lvl5Heading">
+                        <button class="accordion-button collapsed bg-level5 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl5Collapse">
+                            👑 Level 5: Legendary Ascendant (600+ Points)
+                        </button>
+                        </h2>
+                        <div id="lvl5Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
+                        <div class="accordion-body">
+                            The elite few who shaped the very core of Slabbion. Receive full dashboard access + future rewards.
+                        </div>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-outline-violet" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!-- Architecture Hero Section -->
     <section id="hero" class="text-center py-5">
@@ -151,109 +331,241 @@
         </div>
     </section>
 
-    <!-- Slabbion Architectural Systems Section -->
+    <!-- 🏗️ Slabbion Architectural Systems -->
     <section id="eco-design" class="container py-5">
         <h2 class="text-center mb-5 section-title glow-teal">🏗️ Slabbion Architectural Systems</h2>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-            <!-- Smart Grid Homes -->
+            <!-- 3D Designs & Unreal Walkthroughs -->
             <div class="col">
                 <div class="card h-100 shadow-lg border-0 rounded-4 text-center">
                     <div class="feature-box card-body p-4">
-                        <h4 class="mb-3" style="color: #228B22;">Smart Grid Homes</h4>
-                        <p>Zero-emission residences powered by solar arrays and battery walls. Integrated AI regulates power and climate for max efficiency.</p>
-                        <button type="button" class="btn btn-outline-forest mt-3" data-bs-toggle="modal" data-bs-target="#modalSmartGrid">Browse Images</button>
+                    <h4 class="mb-3 text-success">3D Renders & Unreal Walkthroughs</h4>
+                    <p>We take your 2D drawings and breathe life into them using cinematic 3D rendering and real-time Unreal Engine walkthroughs.</p>
+                    <button class="btn btn-outline-forest mt-3" data-bs-toggle="modal" data-bs-target="#modal3D">View Showcase</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Modal Smart Grid Homes -->
-            <div class="modal fade" id="modalSmartGrid" tabindex="-1" aria-labelledby="modalSmartGridLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
+            <!-- Modal: 3D -->
+            <div class="modal fade" id="modal3D" tabindex="-1" aria-labelledby="modal3DLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalSmartGridLabel">Smart Grid Homes</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" id="modal3DLabel">3D Designs & Unreal Engine</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body d-flex flex-wrap gap-3 justify-content-center">
-                        <img src="images/Architecture/SmartGrid_1.jpg" class="img-fluid rounded modal-image" />
-                        <img src="images/Architecture/SmartGrid_2.jpg" class="img-fluid rounded modal-image" />
-                        <img src="images/Architecture/SmartGrid_3.jpg" class="img-fluid rounded modal-image" />
-                    </div>
-                    <div class="modal-footer">
-                        <p>Click images to view in large mode</p>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <img src="images/Architecture/3D_1.jpg" class="img-fluid rounded modal-image" />
+                        <img src="images/Architecture/3D_2.jpg" class="img-fluid rounded modal-image" />
+                        <img src="images/Architecture/3D_3.jpg" class="img-fluid rounded modal-image" />
                     </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Vertical Eco Towers -->
+            <!-- Residential Eco Homes -->
             <div class="col">
                 <div class="card h-100 shadow-lg border-0 rounded-4 text-center">
                     <div class="feature-box card-body p-4">
-                        <h4 class="mb-3" style="color: #228B22;">Vertical Eco Towers</h4>
-                        <p>Skyscrapers with living walls, rain capture systems, and adaptive solar glazing—built for dense, green urbanism.</p>
-                        <button type="button" class="btn btn-outline-forest mt-3" data-bs-toggle="modal" data-bs-target="#modalEcoTowers">Browse Images</button>
+                    <h4 class="mb-3 text-success">Residential Eco Homes</h4>
+                    <p>From energy-efficient bricks to panel-based modular systems — designed with intention, installed by trusted construction partners.</p>
+                    <button class="btn btn-outline-forest mt-3" data-bs-toggle="modal" data-bs-target="#modalEcoHomes">Explore Builds</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Modal Vertical Eco Towers -->
-            <div class="modal fade" id="modalEcoTowers" tabindex="-1" aria-labelledby="modalEcoTowersLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
+            <div class="modal fade" id="modalEcoHomes" tabindex="-1" aria-labelledby="modalEcoHomesLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalEcoTowersLabel">Vertical Eco Towers</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" id="modalEcoHomesLabel">Residential Eco Homes</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body d-flex flex-wrap gap-3 justify-content-center">
-                        <img src="images/Architecture/EcoTowers_1.jpg" class="img-fluid rounded modal-image" />
-                        <img src="images/Architecture/EcoTowers_2.jpg" class="img-fluid rounded modal-image" />
-                        <img src="images/Architecture/EcoTowers_3.jpg" class="img-fluid rounded modal-image" />
-                    </div>
-                    <div class="modal-footer">
-                        <p>Click images to view in large mode</p>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <img src="images/Architecture/EcoHome_1.jpg" class="img-fluid rounded modal-image" />
+                        <img src="images/Architecture/EcoHome_2.jpg" class="img-fluid rounded modal-image" />
+                        <img src="images/Architecture/EcoHome_3.jpg" class="img-fluid rounded modal-image" />
                     </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Modular Habitat Nodes -->
+            <!-- Kitchen Designs -->
             <div class="col">
                 <div class="card h-100 shadow-lg border-0 rounded-4 text-center">
                     <div class="feature-box card-body p-4">
-                        <h4 class="mb-3" style="color: #228B22;">Modular Habitat Nodes</h4>
-                        <p>Quick-deploy shelters for off-grid living, disaster response, or space base prototypes. Lightweight, resilient, and stackable.</p>
-                        <button type="button" class="btn btn-outline-forest mt-3" data-bs-toggle="modal" data-bs-target="#modalHabitat">Browse Images</button>
+                    <h4 class="mb-3 text-success">Custom Kitchen Designs</h4>
+                    <p>Luxury, functionality, and flow — our kitchen layouts are crafted to elevate both space and soul.</p>
+                    <button class="btn btn-outline-forest mt-3" data-bs-toggle="modal" data-bs-target="#modalKitchen">Browse Kitchens</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Modal Modular Habitat Nodes -->
-            <div class="modal fade" id="modalHabitat" tabindex="-1" aria-labelledby="modalHabitatLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
+            <div class="modal fade" id="modalKitchen" tabindex="-1" aria-labelledby="modalKitchenLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalHabitatLabel">Modular Habitat Nodes</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body d-flex flex-wrap gap-3 justify-content-center">
-                            <img src="images/Architecture/Habitat_1.jpg" class="img-fluid rounded modal-image" />
-                            <img src="images/Architecture/Habitat_2.jpg" class="img-fluid rounded modal-image" />
-                            <img src="images/Architecture/Habitat_3.jpg" class="img-fluid rounded modal-image" />
-                        </div>
-                        <div class="modal-footer">
-                            <p>Click images to view in large mode</p>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalKitchenLabel">Kitchen Designs</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-wrap gap-3 justify-content-center">
+                        <img src="images/Architecture/Kitchen_1.jpg" class="img-fluid rounded modal-image" />
+                        <img src="images/Architecture/Kitchen_2.jpg" class="img-fluid rounded modal-image" />
+                        <img src="images/Architecture/Kitchen_3.jpg" class="img-fluid rounded modal-image" />
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Ceilings -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4 text-center">
+                    <div class="feature-box card-body p-4">
+                    <h4 class="mb-3 text-success">Bespoke Ceilings</h4>
+                    <p>We design ceilings that inspire — from recessed LED trays to intricate 3D sculpted panels.</p>
+                    <button class="btn btn-outline-forest mt-3" data-bs-toggle="modal" data-bs-target="#modalCeilings">See Examples</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modalCeilings" tabindex="-1" aria-labelledby="modalCeilingsLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalCeilingsLabel">Custom Ceiling Designs</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-wrap gap-3 justify-content-center">
+                        <img src="images/Architecture/Ceiling_1.jpg" class="img-fluid rounded modal-image" />
+                        <img src="images/Architecture/Ceiling_2.jpg" class="img-fluid rounded modal-image" />
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interior Spaces (Walk-in Closets) -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4 text-center">
+                    <div class="feature-box card-body p-4">
+                    <h4 class="mb-3 text-success">Interior Layouts</h4>
+                    <p>Custom walk-in closets, flowing spaces, and personalized interior solutions with modern edge and elegant simplicity.</p>
+                    <button class="btn btn-outline-forest mt-3" data-bs-toggle="modal" data-bs-target="#modalInterior">Interior Concepts</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modalInterior" tabindex="-1" aria-labelledby="modalInteriorLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalInteriorLabel">Interior Layouts</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-wrap gap-3 justify-content-center">
+                        <img src="images/Architecture/Interior_1.jpg" class="img-fluid rounded modal-image" />
+                        <img src="images/Architecture/Interior_2.jpg" class="img-fluid rounded modal-image" />
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full Build Journey -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4 text-center">
+                    <div class="feature-box card-body p-4">
+                    <h4 class="mb-3 text-success">From Idea to Reality</h4>
+                    <p>We develop your dream space from scratch — transforming napkin sketches into council-approved, build-ready documentation.</p>
+                    <button class="btn btn-outline-forest mt-3" data-bs-toggle="modal" data-bs-target="#modalFullBuild">See Storyboard</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Council Submission Drawings -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4 text-center">
+                    <div class="feature-box card-body p-4">
+                    <h4 class="mb-3 text-success">Council Submissions</h4>
+                    <p>We handle all technical drawings and documents required to get your project approved and ready to build.</p>
+                    <button class="btn btn-outline-forest mt-3" data-bs-toggle="modal" data-bs-target="#modalCouncil">Submission Sets</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warehouse Designs -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4 text-center">
+                    <div class="feature-box card-body p-4">
+                    <h4 class="mb-3 text-success">Warehouse Projects</h4>
+                    <p>High-functioning industrial layouts that meet structural needs and workflow logic, ready for construction implementation.</p>
+                    <button class="btn btn-outline-forest mt-3" data-bs-toggle="modal" data-bs-target="#modalWarehouse">Industrial Work</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secret Panel Homes (w/ Partner Installer) -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4 text-center">
+                    <div class="feature-box card-body p-4">
+                    <h4 class="mb-3 text-success">Panel-Based Homes</h4>
+                    <p>Revolutionary panel-based housing designed by us, installed by our trusted build partners for max efficiency & insulation.</p>
+                    <button class="btn btn-outline-forest mt-3" data-bs-toggle="modal" data-bs-target="#modalPanels">System Overview</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Placeholder Future Service -->
+            <div class="col">
+                <div class="card h-100 shadow-lg border-0 rounded-4 text-center border-dashed">
+                    <div class="feature-box card-body p-4">
+                    <h4 class="mb-3 text-muted">Coming Soon...</h4>
+                    <p>More systems under development at Slabbion Labs. Stay tuned for breakthroughs in prefab innovation and rural dwellings.</p>
+                    <button class="btn btn-outline-secondary mt-3 disabled">Launching Soon</button>
                     </div>
                 </div>
             </div>
 
         </div>
     </section>
+
+    <!-- 🏗️ Architectural Software Stack -->
+    <section class="container py-5">
+        <div class="container">
+            <h2 class="mb-5 text-center section-title glow-teal">🔧 Powered by Architectural Precision</h2>
+
+            <div class="row g-4 text-center">
+
+                <!-- Unreal Engine -->
+                <div class="col-md-4">
+                    <div class="feature-box h-100">
+                    <img src="images/Icons/unreal-icon.png" alt="Unreal Engine" class="mb-3" style="height: 60px;">
+                    <h5>Unreal Engine</h5>
+                    <p>Immersive real-time walkthroughs & cinematic architecture visualization.</p>
+                    </div>
+                </div>
+
+                <!-- ArchiCAD -->
+                <div class="col-md-4">
+                    <div class="feature-box h-100">
+                    <img src="images/Icons/archicad-icon.png" alt="ArchiCAD" class="mb-3" style="height: 60px;">
+                    <h5>ArchiCAD</h5>
+                    <p>Powerful BIM tools for fast modeling & streamlined project coordination.</p>
+                    </div>
+                </div>
+
+                <!-- Revit BIM -->
+                <div class="col-md-4">
+                    <div class="feature-box h-100">
+                    <img src="images/Icons/revit-icon.png" alt="Revit BIM" class="mb-3" style="height: 60px;">
+                    <h5>Revit BIM</h5>
+                    <p>Industry-grade modeling with parametric accuracy and seamless collaboration.</p>
+                    </div>
+                </div>
+
+                </div>
+        </div>
+    </section>
+
 
 
     <!-- IMAGE SCROLLER -->
@@ -372,92 +684,145 @@
         </div>
     </section>
 
-    <!-- Slabbion Architectural Division -->
+    <!-- 🏛️ Slabbion Architectural Division -->
         <section id="sl-architects" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5 section-title glow-teal">🏛️ Slabbion Architectural Division</h2>
             <div class="row text-center g-4 justify-content-center">
 
-            <!-- A1: Atlas Core -->
-            <div class="col-md-6 col-lg-4 col-xl-2">
-                <div class="feature-box h-100 p-4 border rounded shadow-sm">
+                <!-- A1: VisionCraft Studio -->
+                <div class="col-md-6 col-lg-4 col-xl-2">
+                    <div class="feature-box h-100 p-4 border rounded shadow-sm">
                     <i class="fas fa-drafting-compass fa-2x mb-3 text-success glow-icon"></i>
-                    <h5 class="fw-bold">A1: Atlas Core</h5>
-                    <p>Central planning engine. Handles megastructure logic, stability modeling, and cross-environment compliance.</p>
+                    <h5 class="fw-bold">A1: VisionCraft Studio</h5>
+                    <p>High-fidelity 3D design & renders. From concepts to immersive visuals, including Unreal Engine walkthroughs.</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- A2: Echo Habitat -->
-            <div class="col-md-6 col-lg-4 col-xl-2">
-                <div class="feature-box h-100 p-4 border rounded shadow-sm">
-                    <i class="fas fa-city fa-2x mb-3 text-teal glow-icon"></i>
-                    <h5 class="fw-bold">A2: Echo Habitat</h5>
-                    <p>Sustainable housing initiative: low-impact, high-efficiency microgrids with zero-waste utility design.</p>
+                <!-- A2: EchoForm Design -->
+                <div class="col-md-6 col-lg-4 col-xl-2">
+                    <div class="feature-box h-100 p-4 border rounded shadow-sm">
+                    <i class="fas fa-seedling fa-2x mb-3 text-teal glow-icon"></i>
+                    <h5 class="fw-bold">A2: EchoForm Design</h5>
+                    <p>Eco-conscious residential planning using green materials, custom panel homes, and low-carbon footprints.</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- A3: Skytrace Nexus -->
-            <div class="col-md-6 col-lg-4 col-xl-2">
-                <div class="feature-box h-100 p-4 border rounded shadow-sm">
-                    <i class="fas fa-building fa-2x mb-3 text-primary glow-icon"></i>
-                    <h5 class="fw-bold">A3: Skytrace Nexus</h5>
-                    <p>Vertical smart structures—integrated fiber, automated lifts, solar skins, and wind-absorbing balconies.</p>
+                <!-- A3: CoreSpace Interiors -->
+                <div class="col-md-6 col-lg-4 col-xl-2">
+                    <div class="feature-box h-100 p-4 border rounded shadow-sm">
+                    <i class="fas fa-ruler-combined fa-2x mb-3 text-primary glow-icon"></i>
+                    <h5 class="fw-bold">A3: CoreSpace Interiors</h5>
+                    <p>Functional, luxurious interiors—kitchens, walk-in closets, custom ceilings & unique spatial compositions.</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- A4: TerraGrid Studio -->
-            <div class="col-md-6 col-lg-4 col-xl-2">
-                <div class="feature-box h-100 p-4 border rounded shadow-sm">
-                    <i class="fas fa-tree-city fa-2x mb-3 text-warning glow-icon"></i>
-                    <h5 class="fw-bold">A4: TerraGrid Studio</h5>
-                    <p>Land-to-life conversion: terraforming plots into organic smart cities with biophilic zoning controls.</p>
+                <!-- A4: BuildFlow Systems -->
+                <div class="col-md-6 col-lg-4 col-xl-2">
+                    <div class="feature-box h-100 p-4 border rounded shadow-sm">
+                    <i class="fas fa-file-contract fa-2x mb-3 text-warning glow-icon"></i>
+                    <h5 class="fw-bold">A4: BuildFlow Systems</h5>
+                    <p>Complete council submission drawings & warehouse-scale planning with structural precision.</p>
+                    </div>
                 </div>
-            </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Architecture AI Logs -->
+
+    <!-- 📐 Architecture AI Logs -->
     <section id="arch-logs" class="container py-5">
         <h2 class="text-center mb-5 section-title glow-teal">📐 AI-Driven Project Logs</h2>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-            <!-- Atlas Core Log -->
+            <!-- A1: Atlas Core Log -->
             <div class="col">
                 <div class="feature-box card h-100 shadow-lg border-0 rounded-4">
                     <div class="card-body p-4">
-                        <blockquote class="blockquote mb-4">
-                            <p>"Load distribution optimized across 16 tiers. Core column approved for seismic tier-7 region."</p>
-                            <footer class="blockquote-footer">A1: Atlas Core <cite>[10:12 UTC]</cite></footer>
-                        </blockquote>
-                        <div class="text-success">🏗️ Status: Core Design Finalized</div>
+                    <blockquote class="blockquote mb-4">
+                        <p>"Load distribution optimized across 16 tiers. Core column approved for seismic tier-7 region."</p>
+                        <footer class="blockquote-footer">🧠 A1: Atlas Core <cite>[10:12 UTC]</cite></footer>
+                    </blockquote>
+                    <div class="text-success">🏗️ Status: Core Design Finalized</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Echo Habitat Log -->
+            <!-- A2: Echo Habitat Log -->
             <div class="col">
-                <div class="card h-100 shadow-lg border-0 rounded-4">
-                    <div class="feature-box card-body p-4">
-                        <blockquote class="blockquote mb-4">
-                            <p>"Rainwater loop achieved 98.4% reuse. Passive cooling verified through AI heat drift simulation."</p>
-                            <footer class="blockquote-footer">A2: Echo Habitat <cite>[11:47 UTC]</cite></footer>
-                        </blockquote>
-                        <div class="text-teal">🌱 Status: Sustainability Passed</div>
+            <div class="feature-box card h-100 shadow-lg border-0 rounded-4">
+                <div class="card-body p-4">
+                <blockquote class="blockquote mb-4">
+                    <p>"Rainwater loop achieved 98.4% reuse. Passive cooling verified through AI heat drift simulation."</p>
+                    <footer class="blockquote-footer">🌿 A2: Echo Habitat <cite>[11:47 UTC]</cite></footer>
+                </blockquote>
+                <div class="text-teal">🌱 Status: Sustainability Passed</div>
+                </div>
+            </div>
+            </div>
+
+            <!-- A3: Skytrace Nexus Log -->
+            <div class="col">
+            <div class="feature-box card h-100 shadow-lg border-0 rounded-4">
+                <div class="card-body p-4">
+                <blockquote class="blockquote mb-4">
+                    <p>"Auto-lift shaft depth recalibrated. Wind tunnel phase passed with <strong>94% aerodynamic compliance</strong>."</p>
+                    <footer class="blockquote-footer">🏙️ A3: Skytrace Nexus <cite>[13:15 UTC]</cite></footer>
+                </blockquote>
+                <div class="text-primary">🚀 Status: Smart System Synced</div>
+                </div>
+            </div>
+            </div>
+
+            <!-- A4: Grid Studio Log -->
+            <div class="col">
+                <div class="feature-box card h-100 shadow-lg border-0 rounded-4">
+                    <div class="card-body p-4">
+                    <blockquote class="blockquote mb-4">
+                        <p>"Biophilic zoning interface connected. Soil conductivity scanned and mapped with 99.2% precision."</p>
+                        <footer class="blockquote-footer">🌍 A4: Grid Studio <cite>[14:32 UTC]</cite></footer>
+                    </blockquote>
+                    <div class="text-warning">🪴 Status: Land Grid Optimized</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Skytrace Nexus Log -->
+            <!-- A5: RenderForge Agent -->
             <div class="col">
-                <div class="card h-100 shadow-lg border-0 rounded-4">
-                    <div class="feature-box card-body p-4">
-                        <blockquote class="blockquote mb-4">
-                            <p>"Auto-lift shaft depth recalibrated. Wind tunnel phase passed with <strong>94% efficiency</strong>."</p>
-                            <footer class="blockquote-footer">A3: Skytrace Nexus <cite>[13:15 UTC]</cite></footer>
-                        </blockquote>
-                        <div class="text-primary">🏙️ Status: Smart System Synced</div>
+                <div class="feature-box card h-100 shadow-lg border-0 rounded-4">
+                    <div class="card-body p-4">
+                    <blockquote class="blockquote mb-4">
+                        <p>"Full 3D scene rendered in 8K using ray-traced GI. Assets ready for Unreal walk-through export."</p>
+                        <footer class="blockquote-footer">🎨 A5: RenderForge Agent <cite>[15:58 UTC]</cite></footer>
+                    </blockquote>
+                    <div class="text-danger">🖼️ Status: Render Suite Deployed</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- A6: CouncilBot -->
+            <div class="col">
+                <div class="feature-box card h-100 shadow-lg border-0 rounded-4">
+                    <div class="card-body p-4">
+                    <blockquote class="blockquote mb-4">
+                        <p>"Plan set aligned with municipal code R1B-C. Zoning application packaged for client submission."</p>
+                        <footer class="blockquote-footer">📄 A6: CouncilBot <cite>[16:22 UTC]</cite></footer>
+                    </blockquote>
+                    <div class="text-info">📬 Status: Submission Documents Ready</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- A7: BuildSync Sentinel -->
+            <div class="col">
+                <div class="feature-box card h-100 shadow-lg border-0 rounded-4">
+                    <div class="card-body p-4">
+                    <blockquote class="blockquote mb-4">
+                        <p>"Contractor installation phase scheduled. Smart build node deployed with phase-tracking beacon."</p>
+                        <footer class="blockquote-footer">🔧 A7: BuildSync Sentinel <cite>[17:03 UTC]</cite></footer>
+                    </blockquote>
+                    <div class="text-purple">🔄 Status: Sync in Progress</div>
                     </div>
                 </div>
             </div>
@@ -465,28 +830,34 @@
         </div>
     </section>
 
-    <!-- Architecture AI Matrix -->
+
+    <!-- 🧠 Architect AI Integration -->
     <section id="arch-ai-matrix" class="py-5 bg-forest">
         <div class="container">
             <h2 class="text-center mb-5 section-title glow-teal">🧠 Architect AI Integration</h2>
             <div class="row g-4 text-center justify-content-center">
 
-                <div class="col-md-3">
-                    <div class="feature-box p-4 border roundedshadow-sm">
-                        <h5 class="fw-bold">Atlas Core</h5>
-                        <p>Feeds load analytics to all structural systems before simulation.</p>
-                    </div>
-                </div>
+                <!-- Atlas Core -->
                 <div class="col-md-3">
                     <div class="feature-box p-4 border rounded shadow-sm">
-                        <h5 class="fw-bold">Echo Habitat</h5>
-                        <p>Reports sustainable loops into TerraGrid’s green cycle AI.</p>
+                    <h5 class="fw-bold">Atlas Core</h5>
+                    <p>Calculates structural load paths, cross-checks safety zones, and feeds geometry to BIM software for simulation readiness.</p>
                     </div>
                 </div>
+
+                <!-- Echo Habitat -->
                 <div class="col-md-3">
                     <div class="feature-box p-4 border rounded shadow-sm">
-                        <h5 class="fw-bold">Skytrace Nexus</h5>
-                        <p>Optimizes lift traffic data and wind drift inputs for vertical AI control.</p>
+                    <h5 class="fw-bold">Echo Habitat</h5>
+                    <p>Analyzes material sustainability, optimizes solar angles, and generates zero-waste utility layouts for eco-friendly builds.</p>
+                    </div>
+                </div>
+
+                <!-- Skytrace Nexus -->
+                <div class="col-md-3">
+                    <div class="feature-box p-4 border rounded shadow-sm">
+                    <h5 class="fw-bold">Skytrace Nexus</h5>
+                    <p>Simulates vertical transport flows, wind dynamics, and generates parametric geometry for tall structures and tower facades.</p>
                     </div>
                 </div>
 
@@ -494,31 +865,53 @@
         </div>
     </section>
 
-    <!-- Architecture Project Feed -->
+
+    <!-- 🏗️ Architecture Project Feed -->
     <section id="arch-projects" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5 section-title glow-teal">🌍 Live Build Simulation</h2>
+            <h2 class="text-center mb-5 section-title glow-teal">🏗️ Architecture Project Feed</h2>
             <div class="row row-cols-1 row-cols-md-2 g-4">
 
-            <div class="col">
-                <div class="card border-0 h-100 shadow-sm p-4">
-                <h5>🌆 Simulation: APEX NODE</h5>
-                <p>Skyscraper project with integrated Skytrace AI. 36% faster modeling via AI-assisted wind-channel predictions.</p>
-                <p>Efficiency Gain: 36%</p>
+                <!-- Project: Serenity Walkthrough -->
+                <div class="col">
+                    <div class="card border-0 h-100 shadow-sm p-4">
+                    <h5>🎮 Unreal Walkthrough: Serenity Residence</h5>
+                    <p>3D architectural model exported into Unreal Engine with full lighting and material fidelity. Client experienced real-time walkthrough before construction.</p>
+                    <p>Client Approval Rate: 100%</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col">
-                <div class="card border-0 h-100 shadow-sm p-4">
-                <h5>🌿 Simulation: SOLSAN HAVEN</h5>
-                <p>Echo Habitat units deployed across 7 modular plots. Autonomous waste processing trial hit 99.7% uptime.</p>
-                <p>Self-Sufficiency: 99.7%</p>
+                <!-- Project: Eden Core Panel Homes -->
+                <div class="col">
+                    <div class="card border-0 h-100 shadow-sm p-4">
+                    <h5>🏡 Eco Design: Eden Core Panel Homes</h5>
+                    <p>Pre-engineered panel homes designed for fast install with energy-efficient layouts. Partnered with installation experts for rollout.</p>
+                    <p>Avg Build Time Reduction: 40%</p>
+                    </div>
                 </div>
-            </div>
+
+                <!-- Project: LuxSpace Interior -->
+                <div class="col">
+                    <div class="card border-0 h-100 shadow-sm p-4">
+                    <h5>🛋️ Interior Design: LuxSpace Penthouse</h5>
+                    <p>Custom interior featuring 3D-rendered walk-in closets, layered ceilings, and smart lighting schemes delivered in photo-real quality.</p>
+                    <p>Render Resolution: 6K Ultra HD</p>
+                    </div>
+                </div>
+
+                <!-- Project: Submission Ready -->
+                <div class="col">
+                    <div class="card border-0 h-100 shadow-sm p-4">
+                    <h5>📄 Council Submission: Berg View</h5>
+                    <p>Full drawing set optimized for local council compliance, including site plan, drainage, elevations, and green material specs.</p>
+                    <p>Approval Time: 21 Days</p>
+                    </div>
+                </div>
 
             </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="py-4 text-center footer-glow">

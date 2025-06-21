@@ -101,8 +101,8 @@
                                     <li><a class="dropdown-item" href="graphicdesign.html">Graphic Design</a></li>
                                     <li><a class="dropdown-item" href="gamedevelopment.html">Game Development</a></li>
                                     <li><a class="dropdown-item" href="agents.html">AI Agents</a></li>
-                                    <li><a class="dropdown-item" href="drones.html">Drones</a></li>
                                     <li><a class="dropdown-item" href="architecture.html">Architecture</a></li>
+                                    <li><a class="dropdown-item" href="drones.html">Drones</a></li>
                                     <li><a class="dropdown-item" href="vehicles.html">Vehicles</a></li>
                                     <li><a class="dropdown-item" href="armor.html">Body Armor</a></li>
                                     <li><a class="dropdown-item" href="customsolutions.html">Custom Solutions</a></li>
@@ -113,12 +113,192 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact Us</a>
                             </li>
+
+                            <!-- Leaderboard Modal Trigger -->
+                            <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#leaderboardModal">
+                                Leaderboard
+                            </a>
+                            </li>
+
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
     </section>
+
+    <!-- 🏆 Slabbion Leaderboard Modal -->
+    <div class="modal fade" id="leaderboardModal" tabindex="-1" aria-labelledby="leaderboardModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content glass-card border border-violet bg-dark bg-opacity-75 text-light">
+
+                <!-- Modal Header -->
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-violet glow-violet" id="leaderboardModalLabel">
+                    🏆 Slabbion Leaderboard
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+
+                    <!-- Scrollable Leaderboard Table -->
+                    <div class="table-responsive mb-5" style="max-height: 400px; overflow-y: auto;">
+                    <table class="table table-dark table-hover table-borderless align-middle shadow-sm rounded">
+                        <thead class="sticky-top" style="background: rgba(111, 66, 193, 0.3);">
+                        <tr class="text-violet">
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Division</th>
+                            <th>Points</th>
+                            <th>Level</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Nova</td>
+                            <td>Observation Logs</td>
+                            <td>987</td>
+                            <td><span class="badge bg-level5">Level 5</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Orion</td>
+                            <td>Command Center</td>
+                            <td>870</td>
+                            <td><span class="badge bg-level5">Level 5</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Vanta</td>
+                            <td>Journaling Agent</td>
+                            <td>720</td>
+                            <td><span class="badge bg-level4">Level 4</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Hex</td>
+                            <td>News & Intel</td>
+                            <td>640</td>
+                            <td><span class="badge bg-level4">Level 4</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Solis</td>
+                            <td>Spiritual Uplink</td>
+                            <td>590</td>
+                            <td><span class="badge bg-level4">Level 4</span></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Zenith</td>
+                            <td>Master Node</td>
+                            <td>555</td>
+                            <td><span class="badge bg-level4">Level 4</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <!-- ✨ Points System Overview -->
+                    <div class="mb-4 p-4 rounded text-light" style="background: rgba(111, 66, 193, 0.1); border: 1px solid #6f42c1;">
+                    <h5 class="text-violet glow-violet mb-3">📊 Slabbion Point System</h5>
+                    <ul class="mb-3">
+                        <li><strong>+1 Point</strong> — Referral for a completed basic project</li>
+                        <li><strong>+2–5 Points</strong> — Premium package referrals or large contributions</li>
+                        <li><strong>+1 Point</strong> — Visual/media/design contributions</li>
+                        <li><strong>+1 Point</strong> — Verified outreach, partnerships, or insights</li>
+                    </ul>
+                    <p class="text-muted mb-0">⚠️ Points only awarded after project completion and payment confirmation.</p>
+                    </div>
+
+                    <!-- 🧬 Level Breakdown (Collapsible Cards) -->
+                    <div class="accordion" id="levelBreakdown">
+
+                    <!-- Level 1 -->
+                    <div class="accordion-item bg-level1 text-white border-0">
+                        <h2 class="accordion-header" id="lvl1Heading">
+                        <button class="accordion-button collapsed bg-level1 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl1Collapse">
+                            🧪 Level 1: Common Initiate (0–49 Points)
+                        </button>
+                        </h2>
+                        <div id="lvl1Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
+                        <div class="accordion-body">
+                            New explorers of the Slabbion realm. Eligible for early access perks and shoutouts.
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Level 2 -->
+                    <div class="accordion-item bg-level2 text-white border-0">
+                        <h2 class="accordion-header" id="lvl2Heading">
+                        <button class="accordion-button collapsed bg-level2 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl2Collapse">
+                            🛠 Level 2: Uncommon Builder (50–149 Points)
+                        </button>
+                        </h2>
+                        <div id="lvl2Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
+                        <div class="accordion-body">
+                            Solid contributors with multiple successful contributions. Featured on website credits.
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Level 3 -->
+                    <div class="accordion-item bg-level3 text-white border-0">
+                        <h2 class="accordion-header" id="lvl3Heading">
+                        <button class="accordion-button collapsed bg-level3 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl3Collapse">
+                            🧠 Level 3: Rare Strategist (150–299 Points)
+                        </button>
+                        </h2>
+                        <div id="lvl3Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
+                        <div class="accordion-body">
+                            Tactical minds shaping projects or creative direction. Eligible for agent dashboard testing.
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Level 4 -->
+                    <div class="accordion-item bg-level4 text-white border-0">
+                        <h2 class="accordion-header" id="lvl4Heading">
+                        <button class="accordion-button collapsed bg-level4 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl4Collapse">
+                            🛡 Level 4: Epic Sentinel (300–599 Points)
+                        </button>
+                        </h2>
+                        <div id="lvl4Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
+                        <div class="accordion-body">
+                            Leaders and strategists that guide Slabbion divisions. Granted semi-private access to tools and briefs.
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Level 5 -->
+                    <div class="accordion-item bg-level5 text-white border-0">
+                        <h2 class="accordion-header" id="lvl5Heading">
+                        <button class="accordion-button collapsed bg-level5 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl5Collapse">
+                            👑 Level 5: Legendary Ascendant (600+ Points)
+                        </button>
+                        </h2>
+                        <div id="lvl5Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
+                        <div class="accordion-body">
+                            The elite few who shaped the very core of Slabbion. Receive full dashboard access + future rewards.
+                        </div>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-outline-violet" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!-- Social Media Hero Section -->
     <section id="hero" class="text-center py-5">
