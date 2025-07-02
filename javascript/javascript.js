@@ -210,3 +210,113 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+// ========== 📝 Web Development Validation Logic =========
+if (fields.websiteType && fields.websiteType.closest('#webDevSection')?.style.display !== 'none') {
+    if (!fields.websiteType.value.trim()) {
+        markInvalid(fields.websiteType, "Please select a website type.");
+        valid = false;
+    }
+}
+
+if (fields.packageSelect && fields.packageSelect.closest('#webDevSection')?.style.display !== 'none') {
+    if (!fields.packageSelect.value.trim()) {
+        markInvalid(fields.packageSelect, "Please select a package.");
+        valid = false;
+    }
+}
+
+
+// ========== 📝 Drone Services Validation Logic =========
+if (fields.dronesDetails && fields.dronesDetails.closest('#dronesSection')?.style.display !== 'none') {
+    if (!fields.dronesDetails.value.trim()) {
+        markInvalid(fields.dronesDetails, "Please provide details for drone services.");
+        valid = false;
+    }
+}
+
+
+// ========== 📝 Vehicle Services Validation Logic =========
+if (fields.vehiclesDetails && fields.vehiclesDetails.closest('#vehiclesSection')?.style.display !== 'none') {
+    if (!fields.vehiclesDetails.value.trim()) {
+        markInvalid(fields.vehiclesDetails, "Please provide details for vehicle services.");
+        valid = false;
+    }
+}
+
+// ========== 📝 Armor Services Validation Logic ========
+if (fields.armorDetails && fields.armorDetails.closest('#armorSection')?.style.display !== 'none') {
+    if (!fields.armorDetails.value.trim()) {
+        markInvalid(fields.armorDetails, "Please provide details for armor services.");
+        valid = false;
+    }
+}
+
+// ========== 📝 Architecture Services Validation Logic ========
+if (fields.architectureDetails && fields.architectureDetails.closest('#architectureSection')?.style.display !== 'none') {
+    if (!fields.architectureDetails.value.trim()) {
+        markInvalid(fields.architectureDetails, "Please provide details for architecture services.");
+        valid = false;
+    }
+}
+
+// ========== 📝 Graphic Design Validation Logic ==========
+if (fields.graphicType && fields.graphicType.closest('#graphicDesignSection')?.style.display !== 'none') {
+    if (!fields.graphicType.value.trim()) {
+        markInvalid(fields.graphicType, "Please select a design type.");
+        valid = false;
+    }
+}
+
+if (fields.graphicDescription && fields.graphicDescription.closest('#graphicDesignSection')?.style.display !== 'none') {
+    if (!fields.graphicDescription.value.trim()) {
+        markInvalid(fields.graphicDescription, "Please describe your design request.");
+        valid = false;
+    }
+}
+
+// ========== 📝 Social Media Validation Logic =========
+if (fields.socialService && fields.socialService.closest('#socialMediaSection')?.style.display !== 'none') {
+    if (!fields.socialService.value.trim()) {
+        markInvalid(fields.socialService, "Please select a social media service.");
+        valid = false;
+    }
+}
+
+if (fields.socialPlatforms && fields.socialPlatforms.closest('#socialMediaSection')?.style.display !== 'none') {
+    if (!fields.socialPlatforms.value.trim()) {
+        markInvalid(fields.socialPlatforms, "Please specify your social media platforms.");
+        valid = false;
+    }
+}
+// ========== 📝 AI Agent Validation Logic =========
+if (fields.aiAgentService && fields.aiAgentService.closest('#aiAgentsSection')?.style.display !== 'none') {
+    if (!fields.aiAgentService.value.trim()) {
+        markInvalid(fields.aiAgentService, "Please select an AI agent service.");
+        valid = false;
+    }
+}
+
+if (fields.aiAgentPurpose && fields.aiAgentPurpose.closest('#aiAgentsSection')?.style.display !== 'none') {
+    if (!fields.aiAgentPurpose.value.trim()) {
+        markInvalid(fields.aiAgentPurpose, "Please describe the purpose of your AI agent.");
+        valid = false;
+    }
+}
+
+// ========== 📝 Custom Solutions Validation Logic ========
+if (fields.customOption && fields.customOption.closest('#customSolutionsSection')?.style.display !== 'none') {
+    if (!fields.customOption.value.trim()) {
+        markInvalid(fields.customOption, "Please select a custom solution option.");
+        valid = false;
+    }
+}
+
+if (fields.customDescription && fields.customDescription.closest('#customSolutionsSection')?.style.display !== 'none') {
+    if (!fields.customDescription.value.trim()) {
+        markInvalid(fields.customDescription, "Please describe your custom solution request.");
+        valid = false;
+    }
+}
+
+
