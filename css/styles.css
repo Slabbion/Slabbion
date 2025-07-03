@@ -823,3 +823,20 @@ body.glass-bg {
   box-shadow: 0 0 30px #b57cff;
   color: #b57cff;
 }
+
+/* Video Intro */
+#video-intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+
+#video-intro video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

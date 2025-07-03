@@ -59,6 +59,23 @@
         </div>
     </div>
 
+    <!-- Video Intro Overlay -->
+    <div id="video-intro" style="display: none;">
+        <video id="intro-video"
+            autoplay
+            muted
+            playsinline
+            preload="auto"
+            disablePictureInPicture
+            controlslist="nodownload nofullscreen noremoteplay"
+            style="pointer-events: none; width: 100%; height: 100%; object-fit: cover;">
+            <source src="images/intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+
     <!-- Main Website Content -->
     <div id="main-content" style="display: none;">
         <!-- NAV BAR -->
@@ -704,32 +721,60 @@
 
 <!-- Loading Screen JS -->
 <script>
-  window.onload = () => {
+document.addEventListener("DOMContentLoaded", function () {
     const loadText = document.getElementById('load-text');
     const subText = document.getElementById('load-subtext');
-    const mainContent = document.getElementById('main-content');
-    const loadingScreen = document.getElementById('loading-screen');
+    const progressBar = document.getElementById("progress-fill");
+    const loadingScreen = document.getElementById("loading-screen");
+    const videoIntro = document.getElementById("video-intro");
+    const introVideo = document.getElementById("intro-video");
+    const mainContent = document.getElementById("main-content");
     const audio = document.getElementById('start-sound');
 
-    // Simulate typing + audio
-    setTimeout(() => {
-      loadText.textContent = "Activating MegaXGnome Framework...";
-      subText.textContent = "Slabbion OS v1.0 - Loading Interfaces...";
-      audio?.play().catch(() => {}); // Autoplay might be blocked
-    }, 1800);
+    let width = 0;
+    const interval = setInterval(() => {
+        if (width >= 100) {
+            clearInterval(interval);
 
-    setTimeout(() => {
-      loadText.textContent = "Launching Zenith Protocol...";
-      subText.textContent = "Interface ready. Welcome to Slabbion.";
-    }, 3400);
+            // Hide loading screen
+            loadingScreen.style.display = "none";
 
-    // Finish loading sequence
-    setTimeout(() => {
-      loadingScreen.style.display = 'none';
-      mainContent.style.display = 'block';
-    }, 5200);
-  };
+            // Show and play the intro video
+            videoIntro.style.display = "block";
+            introVideo.play().catch((err) => {
+                console.error("Autoplay failed:", err);
+                // fallback: directly show main content if autoplay fails
+                videoIntro.style.display = "none";
+                mainContent.style.display = "block";
+            });
+
+            // When video ends, show main content
+            introVideo.onended = () => {
+                videoIntro.style.display = "none";
+                mainContent.style.display = "block";
+            };
+
+        } else {
+            width++;
+            progressBar.style.width = width + "%";
+
+            // Inject staged text/audio during load
+            if (width === 30) {
+                loadText.textContent = "Activating MegaXGnome Framework...";
+                subText.textContent = "Slabbion OS v1.0 - Loading Interfaces...";
+                audio?.play().catch(() => {});
+            }
+
+            if (width === 65) {
+                loadText.textContent = "Launching Zenith Protocol...";
+                subText.textContent = "Interface ready. Welcome to Slabbion.";
+            }
+        }
+    }, 30); // adjust speed as needed
+});
 </script>
+
+
 
 <!-- Theme Toggle Script -->
 <script>
