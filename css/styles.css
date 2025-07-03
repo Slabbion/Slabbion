@@ -638,3 +638,188 @@ body.light-mode .navbar-toggler .navbar-toggler-icon {
 .stat-label {
     color: #ccc;
 }
+
+/* === Loading Screen Styles === */
+/* Loading screen for initial page load */
+#loading-screen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0e0e2c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  flex-direction: column;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+}
+
+.loading-content {
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.load-text {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+
+.progress-bar {
+  width: 300px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 1em auto;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #6f42c1, #5e17eb);
+  animation: fillBar 3s ease-out forwards;
+}
+
+.load-subtext {
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  opacity: 0.6;
+}
+
+@keyframes fillBar {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* styles.css — Zenith Phase 2 UI */
+
+body.glass-bg {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(to bottom, #0d0d1a, #000);
+  color: #00f6ff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Zenith Header */
+/* Zenith UI Loading Screen */
+.zenith-header {
+  background: rgba(13, 13, 26, 0.8);
+  border-bottom: 1px solid #00f6ff33;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 246, 255, 0.1);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+.zenith-header h2 {
+  font-size: 1.5rem;
+  color: #00f6ff;
+  margin: 0;
+}
+
+.status-info span {
+  margin-left: 20px;
+  color: #00f6ff;
+}
+
+.status.online {
+  color: #00ff99;
+  font-weight: bold;
+}
+
+/* Sidebar */
+.zenith-sidebar {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 220px;
+  height: calc(100% - 80px);
+  background: rgba(13, 13, 26, 0.5);
+  border-right: 1px solid #00f6ff22;
+  padding: 30px 10px;
+  box-shadow: 4px 0 20px rgba(0, 246, 255, 0.05);
+  backdrop-filter: blur(12px);
+}
+
+.zenith-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.zenith-sidebar ul li {
+  margin-bottom: 20px;
+}
+
+.zenith-sidebar ul li a {
+  text-decoration: none;
+  color: #5e17eb;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.zenith-sidebar ul li a:hover {
+  color: #b57cff;
+  text-shadow: 0 0 10px #b57cff;
+}
+
+/* Main Panel */
+.zenith-main {
+  margin-left: 220px;
+  padding: 40px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #00f6ff33;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(0, 246, 255, 0.1);
+  backdrop-filter: blur(16px);
+}
+
+.dashboard-card h3 {
+  margin-top: 0;
+  color: #00f6ff;
+}
+
+/* Floating Button */
+.zenith-float-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(0, 246, 255, 0.1);
+  color: #5e17eb;
+  border: 2px solid #5e17eb;
+  border-radius: 50%;
+  padding: 16px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px #00f6ff66;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.zenith-float-button:hover {
+  background: #00f6ff22;
+  box-shadow: 0 0 30px #b57cff;
+  color: #b57cff;
+}

@@ -48,632 +48,688 @@
 
 <body>
 
-    <!-- NAV BAR -->
-    <section id="title">
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container-fluid">
-
-                <a class="navbar-brand" href="index.html">
-                    <!-- Logo -->
-                    <img src="images/SlabbionLogo.png" alt="Slabbion Logo">
-                </a>
-
-                <!-- Toggle Theme Button -->
-                <button id="theme-toggle" class="btn btn-light mt-3 feature-box d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                    <i id="theme-icon" class="fas fa-moon"></i>
-                </button>
-
-                <!-- Offcanvas Toggler -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- COLLAPSE NAVBAR -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                            <!-- Logo -->
-                            <img src="images/SlabbionLogo.png" alt="Slabbion Logo" class="nav-logo">
-                        </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-
-                    <!-- OFFCANVAS BODY -->
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 350px;">
-
-                            <!-- HOME TAB -->
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html" title="Go to Home Page">Home</a>
-                            </li>
-
-                            <!-- Social Media Dropdown -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="eventsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Services
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
-                                    <li><a class="dropdown-item" href="webdevelopment.html">Web Development</a></li>
-                                    <li><a class="dropdown-item" href="socialmedia.html">Social Media</a></li>
-                                    <li><a class="dropdown-item" href="graphicdesign.html">Graphic Design</a></li>
-                                    <li><a class="dropdown-item" href="gamedevelopment.html">Game Development</a></li>
-                                    <li><a class="dropdown-item" href="agents.html">AI Agents</a></li>
-                                    <li><a class="dropdown-item" href="architecture.html">Architecture</a></li>
-                                    <li><a class="dropdown-item" href="drones.html">Drones</a></li>
-                                    <li><a class="dropdown-item" href="vehicles.html">Vehicles</a></li>
-                                    <li><a class="dropdown-item" href="armor.html">Body Armor</a></li>
-                                    <li><a class="dropdown-item" href="customsolutions.html">Custom Solutions</a></li>
-                                </ul>
-                            </li>
-
-                            <!-- Contact Us TAB -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact Us</a>
-                            </li>
-
-                            <!-- Leaderboard Modal Trigger -->
-                            <li class="nav-item">
-                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#leaderboardModal">
-                                Leaderboard
-                            </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
+    <!-- Loading Overlay -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h1 class="load-text" id="load-text">Initializing Slabbion System...</h1>
+            <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
             </div>
-        </nav>
-    </section>
-
-    <!-- 🏆 Slabbion Leaderboard Modal -->
-    <div class="modal fade" id="leaderboardModal" tabindex="-1" aria-labelledby="leaderboardModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-            <div class="modal-content glass-card border border-violet bg-dark bg-opacity-75 text-light">
-
-                <!-- Modal Header -->
-                <div class="modal-header border-0">
-                    <h5 class="modal-title text-violet glow-violet" id="leaderboardModalLabel">
-                    🏆 Slabbion Leaderboard
-                    </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <!-- Modal Body -->
-                <div class="modal-body">
-
-                    <!-- Scrollable Leaderboard Table -->
-                    <div class="table-responsive mb-5" style="max-height: 400px; overflow-y: auto;">
-                        <table class="table table-dark table-hover table-borderless align-middle shadow-sm rounded">
-                            <thead class="sticky-top" style="background: rgba(111, 66, 193, 0.3);">
-                            <tr class="text-violet">
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>Division</th>
-                                <th>Points</th>
-                                <th>Level</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Niël</td>
-                                <td>All divisions</td>
-                                <td>600+</td>
-                                <td><span class="badge bg-level5">Level 5</span></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Lucah</td>
-                                <td>Referrals</td>
-                                <td>45</td>
-                                <td><span class="badge bg-level1">Level 1</span></td>
-                            </tr>
-
-                            <tr>
-                                <td>3</td>
-                                <td>Jayden</td>
-                                <td>New Recruit</td>
-                                <td>1</td>
-                                <td><span class="badge bg-level1">Level 1</span></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- ✨ Points System Overview -->
-                    <div class="mb-4 p-4 rounded text-light" style="background: rgba(111, 66, 193, 0.1); border: 1px solid #6f42c1;">
-                        <h5 class="text-violet glow-violet mb-3">📊 Slabbion Point System</h5>
-                        <ul class="mb-3">
-                            <li><strong>+5 Points</strong> — For Basic Contributions
-                            <ul>
-                                <li>Examples: Small website updates, single-page builds, basic social media posts, logo design, simple banners.</li>
-                            </ul>
-                            </li>
-                            <li><strong>+10 Points</strong> — For Advanced Contributions
-                            <ul>
-                                <li>Examples: Multi-page websites, full social campaigns, product branding sets, UI design, content calendars.</li>
-                            </ul>
-                            </li>
-                            <li><strong>+20 Points</strong> — For Premium Contributions
-                            <ul>
-                                <li>Examples: Full website builds, eCommerce systems, full identity design packs, video content, paid ad campaigns.</li>
-                            </ul>
-                            </li>
-                            <li><strong>Referrals (When Project is Closed and Paid):</strong>
-                            <ul>
-                                <li><strong>+5 Points</strong> — Referral for Basic Package</li>
-                                <li><strong>+10 Points</strong> — Referral for Advanced Package</li>
-                                <li><strong>+20 Points</strong> — Referral for Premium Package</li>
-                            </ul>
-                            </li>
-                            <li><strong>Bonuses:</strong>
-                            <ul>
-                                <li><strong>+1–3 Points</strong> — Team spirit, creative ideas, trusted insights, early delivery, or crisis-solving moments.</li>
-                                <li><strong>+1 Point</strong> — For verified outreach or partnership connections that lead to new opportunities.</li>
-                            </ul>
-                            </li>
-                        </ul>
-
-                        <p class="text-warning mt-3 animate__animated animate__fadeInUp animate__delay-1s">
-                            💵 <strong>Each point = R100</strong> value. For example, 25 points = R2500 payout.
-                        </p>
-                        <p class="text-warning mt-3 animate__animated animate__fadeInUp animate__delay-1s">
-                            ⚠️ Points are only awarded after project delivery and confirmed payment from the client or lead.
-                        </p>
-                    </div>
-
-
-                    <!-- 🧬 Level Breakdown (Collapsible Cards) -->
-                    <div class="accordion" id="levelBreakdown">
-
-                    <!-- Level 1 -->
-                    <div class="accordion-item bg-level1 text-white border-0">
-                        <h2 class="accordion-header" id="lvl1Heading">
-                        <button class="accordion-button collapsed bg-level1 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl1Collapse">
-                            🧪 Level 1: Common Initiate (0–49 Points)
-                        </button>
-                        </h2>
-                        <div id="lvl1Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
-                            <div class="accordion-body">
-                                New explorers of the Slabbion realm. Eligible for early access perks and shoutouts.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Level 2 -->
-                    <div class="accordion-item bg-level2 text-white border-0">
-                        <h2 class="accordion-header" id="lvl2Heading">
-                        <button class="accordion-button collapsed bg-level2 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl2Collapse">
-                            🛠 Level 2: Uncommon Builder (50–149 Points)
-                        </button>
-                        </h2>
-                        <div id="lvl2Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
-                            <div class="accordion-body">
-                                Solid contributors with multiple successful tasks or client interactions. Featured on website credits.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Level 3 -->
-                    <div class="accordion-item bg-level3 text-white border-0">
-                        <h2 class="accordion-header" id="lvl3Heading">
-                        <button class="accordion-button collapsed bg-level3 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl3Collapse">
-                            🧠 Level 3: Rare Strategist (150–299 Points)
-                        </button>
-                        </h2>
-                        <div id="lvl3Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
-                            <div class="accordion-body">
-                                Tactical minds shaping client vision, tech builds, or creative campaigns. Can manage their own clients under Slabbion.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Level 4 -->
-                    <div class="accordion-item bg-level4 text-white border-0">
-                        <h2 class="accordion-header" id="lvl4Heading">
-                        <button class="accordion-button collapsed bg-level4 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl4Collapse">
-                            🛡 Level 4: Epic Sentinel (300–599 Points)
-                        </button>
-                        </h2>
-                        <div id="lvl4Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
-                            <div class="accordion-body">
-                                Strategic leaders trusted with sensitive briefs and Slabbion tools. Access to beta tech, internal dashboards, and confidential missions.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Level 5 -->
-                    <div class="accordion-item bg-level5 text-white border-0">
-                        <h2 class="accordion-header" id="lvl5Heading">
-                        <button class="accordion-button collapsed bg-level5 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl5Collapse">
-                            👑 Level 5: Legendary Ascendant (600+ Points)
-                        </button>
-                        </h2>
-                        <div id="lvl5Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
-                            <div class="accordion-body">
-                                The elite few who shaped the core of Slabbion. 
-                            </div>
-                        </div>
-                    </div>
-
-                    </div>
-                </div>
-
-                <!-- Modal Footer -->
-                <div class="modal-footer border-0">
-                    <button type="button" class="btn btn-outline-violet" data-bs-dismiss="modal">Close</button>
-                </div>
-
-            </div>
+            <p class="load-subtext" id="load-subtext">Preparing Zenith Protocol...</p>
         </div>
-    </div>-
+    </div>
+
+    <!-- Main Website Content -->
+    <div id="main-content" style="display: none;">
+        <!-- NAV BAR -->
+        <section id="title">
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container-fluid">
+
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo -->
+                        <img src="images/SlabbionLogo.png" alt="Slabbion Logo">
+                    </a>
+
+                    <!-- Toggle Theme Button -->
+                    <button id="theme-toggle" class="btn btn-light mt-3 feature-box d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                        <i id="theme-icon" class="fas fa-moon"></i>
+                    </button>
+
+                    <!-- Offcanvas Toggler -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- COLLAPSE NAVBAR -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                                <!-- Logo -->
+                                <img src="images/SlabbionLogo.png" alt="Slabbion Logo" class="nav-logo">
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+
+                        <!-- OFFCANVAS BODY -->
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 350px;">
+
+                                <!-- HOME TAB -->
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html" title="Go to Home Page">Home</a>
+                                </li>
+
+                                <!-- Social Media Dropdown -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="eventsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Services
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
+                                        <li><a class="dropdown-item" href="webdevelopment.html">Web Development</a></li>
+                                        <li><a class="dropdown-item" href="socialmedia.html">Social Media</a></li>
+                                        <li><a class="dropdown-item" href="graphicdesign.html">Graphic Design</a></li>
+                                        <li><a class="dropdown-item" href="gamedevelopment.html">Game Development</a></li>
+                                        <li><a class="dropdown-item" href="agents.html">AI Agents</a></li>
+                                        <li><a class="dropdown-item" href="architecture.html">Architecture</a></li>
+                                        <li><a class="dropdown-item" href="drones.html">Drones</a></li>
+                                        <li><a class="dropdown-item" href="vehicles.html">Vehicles</a></li>
+                                        <li><a class="dropdown-item" href="armor.html">Body Armor</a></li>
+                                        <li><a class="dropdown-item" href="customsolutions.html">Custom Solutions</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- Contact Us TAB -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact Us</a>
+                                </li>
+
+                                <!-- Leaderboard Modal Trigger -->
+                                <li class="nav-item">
+                                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#leaderboardModal">
+                                    Leaderboard
+                                </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <!-- 🏆 Slabbion Leaderboard Modal -->
+        <div class="modal fade" id="leaderboardModal" tabindex="-1" aria-labelledby="leaderboardModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content glass-card border border-violet bg-dark bg-opacity-75 text-light">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title text-violet glow-violet" id="leaderboardModalLabel">
+                        🏆 Slabbion Leaderboard
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+
+                        <!-- Scrollable Leaderboard Table -->
+                        <div class="table-responsive mb-5" style="max-height: 400px; overflow-y: auto;">
+                            <table class="table table-dark table-hover table-borderless align-middle shadow-sm rounded">
+                                <thead class="sticky-top" style="background: rgba(111, 66, 193, 0.3);">
+                                <tr class="text-violet">
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Division</th>
+                                    <th>Points</th>
+                                    <th>Level</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Niël</td>
+                                    <td>All divisions</td>
+                                    <td>600+</td>
+                                    <td><span class="badge bg-level5">Level 5</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Lucah</td>
+                                    <td>Referrals</td>
+                                    <td>45</td>
+                                    <td><span class="badge bg-level1">Level 1</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>3</td>
+                                    <td>Jayden</td>
+                                    <td>New Recruit</td>
+                                    <td>1</td>
+                                    <td><span class="badge bg-level1">Level 1</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- ✨ Points System Overview -->
+                        <div class="mb-4 p-4 rounded text-light" style="background: rgba(111, 66, 193, 0.1); border: 1px solid #6f42c1;">
+                            <h5 class="text-violet glow-violet mb-3">📊 Slabbion Point System</h5>
+                            <ul class="mb-3">
+                                <li><strong>+5 Points</strong> — For Basic Contributions
+                                <ul>
+                                    <li>Examples: Small website updates, single-page builds, basic social media posts, logo design, simple banners.</li>
+                                </ul>
+                                </li>
+                                <li><strong>+10 Points</strong> — For Advanced Contributions
+                                <ul>
+                                    <li>Examples: Multi-page websites, full social campaigns, product branding sets, UI design, content calendars.</li>
+                                </ul>
+                                </li>
+                                <li><strong>+20 Points</strong> — For Premium Contributions
+                                <ul>
+                                    <li>Examples: Full website builds, eCommerce systems, full identity design packs, video content, paid ad campaigns.</li>
+                                </ul>
+                                </li>
+                                <li><strong>Referrals (When Project is Closed and Paid):</strong>
+                                <ul>
+                                    <li><strong>+5 Points</strong> — Referral for Basic Package</li>
+                                    <li><strong>+10 Points</strong> — Referral for Advanced Package</li>
+                                    <li><strong>+20 Points</strong> — Referral for Premium Package</li>
+                                </ul>
+                                </li>
+                                <li><strong>Bonuses:</strong>
+                                <ul>
+                                    <li><strong>+1–3 Points</strong> — Team spirit, creative ideas, trusted insights, early delivery, or crisis-solving moments.</li>
+                                    <li><strong>+1 Point</strong> — For verified outreach or partnership connections that lead to new opportunities.</li>
+                                </ul>
+                                </li>
+                            </ul>
+
+                            <p class="text-warning mt-3 animate__animated animate__fadeInUp animate__delay-1s">
+                                💵 <strong>Each point = R TBD </strong> value. For example, 25 points = TBD payout.
+                            </p>
+                            <p class="text-warning mt-3 animate__animated animate__fadeInUp animate__delay-1s">
+                                ⚠️ Points are only awarded after project delivery and confirmed payment from the client or lead.
+                            </p>
+                        </div>
+
+
+                        <!-- 🧬 Level Breakdown (Collapsible Cards) -->
+                        <div class="accordion" id="levelBreakdown">
+
+                        <!-- Level 1 -->
+                        <div class="accordion-item bg-level1 text-white border-0">
+                            <h2 class="accordion-header" id="lvl1Heading">
+                            <button class="accordion-button collapsed bg-level1 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl1Collapse">
+                                🧪 Level 1: Common Initiate (0–49 Points)
+                            </button>
+                            </h2>
+                            <div id="lvl1Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
+                                <div class="accordion-body">
+                                    New explorers of the Slabbion realm. Eligible for early access perks and shoutouts.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Level 2 -->
+                        <div class="accordion-item bg-level2 text-white border-0">
+                            <h2 class="accordion-header" id="lvl2Heading">
+                            <button class="accordion-button collapsed bg-level2 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl2Collapse">
+                                🛠 Level 2: Uncommon Builder (50–149 Points)
+                            </button>
+                            </h2>
+                            <div id="lvl2Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
+                                <div class="accordion-body">
+                                    Solid contributors with multiple successful tasks or client interactions. Featured on website credits.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Level 3 -->
+                        <div class="accordion-item bg-level3 text-white border-0">
+                            <h2 class="accordion-header" id="lvl3Heading">
+                            <button class="accordion-button collapsed bg-level3 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl3Collapse">
+                                🧠 Level 3: Rare Strategist (150–299 Points)
+                            </button>
+                            </h2>
+                            <div id="lvl3Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
+                                <div class="accordion-body">
+                                    Tactical minds shaping client vision, tech builds, or creative campaigns. Can manage their own clients under Slabbion.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Level 4 -->
+                        <div class="accordion-item bg-level4 text-white border-0">
+                            <h2 class="accordion-header" id="lvl4Heading">
+                            <button class="accordion-button collapsed bg-level4 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl4Collapse">
+                                🛡 Level 4: Epic Sentinel (300–599 Points)
+                            </button>
+                            </h2>
+                            <div id="lvl4Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
+                                <div class="accordion-body">
+                                    Strategic leaders trusted with sensitive briefs and Slabbion tools. Access to beta tech, internal dashboards, and confidential missions.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Level 5 -->
+                        <div class="accordion-item bg-level5 text-white border-0">
+                            <h2 class="accordion-header" id="lvl5Heading">
+                            <button class="accordion-button collapsed bg-level5 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#lvl5Collapse">
+                                👑 Level 5: Legendary Ascendant (600+ Points)
+                            </button>
+                            </h2>
+                            <div id="lvl5Collapse" class="accordion-collapse collapse" data-bs-parent="#levelBreakdown">
+                                <div class="accordion-body">
+                                    The elite few who shaped the core of Slabbion. 
+                                </div>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Modal Footer -->
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-outline-violet" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>-
 
         <!-- 🏠 Home / Mission Statement -->
-        <section class="py-5 container text-center text-light">
-            <img src="images/Slabbion_Logo_2500x500px.png" alt="Slabbion Logo" class="logo">
-            <h1 class="display-5 fw-bold glow-blue mb-4">A Mission Built on Innovation</h1>
-            <p class="lead mb-3">
-                At <strong>Slabbion</strong>, we don't just build websites or graphics — we craft entire ecosystems that connect design, technology, and purpose.
-            </p>
-            <p class="mb-3">
-                Whether it's a sleek landing page, a custom e-commerce solution, a content-rich social presence, or even AI-powered dashboards — everything we create is 
-                <span class="text-violet fw-bold">tailor-made</span> to match your mission and scale with your vision.
-            </p>
-            <p class="mb-4">
-                As we expand into AI systems, architecture, drone development, vehicles, and armor design, our mission remains clear: 
-                <span class="text-warning">empower creators and visionaries to thrive through technology</span>.
-            </p>
-            <p class="mb-4 animate__animated animate__fadeInUp animate__delay-1s">
-                🔧 Built from scratch. 🔮 Designed for the future. 💡 Fueled by purpose.
-            </p>
-            <a href="#services" class="btn btn-outline-light feature-box glow-blue mt-3">
-                Explore Our Services
-            </a>
+        <section id="hero" class="text-center py-5">
+            <div class="container">
+                <img src="images/Slabbion_Logo_2500x500px.png" alt="Slabbion Logo" class="logo">
+                <h1 class="display-4 glow-blue">A Mission Built on Innovation</h1>
+                    <p class="lead font-weight-bold">
+                        At <strong>Slabbion</strong>, we don't just build websites or graphics — we craft entire ecosystems that connect design, technology, and purpose.
+                    </p>
+                    <p class="lead font-weight-bold">
+                        Whether it's a sleek landing page, a custom e-commerce solution, a content-rich social presence, or even AI-powered dashboards — everything we create is 
+                        <span class="text-violet fw-bold">tailor-made</span> to match your mission and scale with your vision.
+                    </p>
+                    <p class="lead font-weight-bold">
+                        As we expand into AI systems, architecture, drone development, vehicles, and armor design, our mission remains clear: 
+                        <span class="text-warning">empower creators and visionaries to thrive through technology</span>.
+                    </p>
+                    <p class="mt-3 animate__animated animate__fadeInUp animate__delay-1s" style="color: #5e17eb;">
+                        🔧 Built from scratch. 🔮 Designed for the future. 💡 Fueled by purpose.
+                    </p>
+                    <a href="#services" class="btn btn-light mt-3 feature-box glow-blue">
+                        Explore Our Services
+                    </a>
+            </div>
         </section>
 
 
 
 
-    <!-- Services Section -->
-    <section id="services" class="py-5">
-        <div class="container">
-            <div class="row">
+        <!-- Services Section -->
+        <section id="services" class="py-5">
+            <div class="container">
+                <div class="row">
 
-                <!-- Web Development -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
-                    <i class="fas fa-laptop-code fa-3x mb-3 text-primary"></i>
-                    <h4 class="mb-2">Web Development</h4>
-                    <p>Modern, responsive websites built for performance and scalability.</p>
-                    <a href="webdevelopment.html#web-development" class="btn btn-outline-primary mt-3">Explore</a>
+                    <!-- Web Development -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-laptop-code fa-3x mb-3 text-primary"></i>
+                        <h4 class="mb-2">Web Development</h4>
+                        <p>Modern, responsive websites built for performance and scalability.</p>
+                        <a href="webdevelopment.html#web-development" class="btn btn-outline-primary mt-3">Explore</a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Social Media Management -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
-                    <i class="fas fa-bullhorn fa-3x mb-3 text-success"></i>
-                    <h4 class="mb-2">Social Media</h4>
-                    <p>Grow your digital presence through data-driven content strategies.</p>
-                    <a href="socialmedia.html#social-media-management" class="btn btn-outline-success mt-3">Explore</a>
+                    <!-- Social Media Management -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-bullhorn fa-3x mb-3 text-success"></i>
+                        <h4 class="mb-2">Social Media</h4>
+                        <p>Grow your digital presence through data-driven content strategies.</p>
+                        <a href="socialmedia.html#social-media-management" class="btn btn-outline-success mt-3">Explore</a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Graphic Design -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
-                    <i class="fas fa-pen-nib fa-3x mb-3 text-info"></i>
-                    <h4 class="mb-2">Graphic Design</h4>
-                    <p>Brand-focused designs that communicate your identity with impact.</p>
-                    <a href="graphicdesign.html#graphic-design" class="btn btn-outline-info mt-3">Explore</a>
+                    <!-- Graphic Design -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-pen-nib fa-3x mb-3 text-info"></i>
+                        <h4 class="mb-2">Graphic Design</h4>
+                        <p>Brand-focused designs that communicate your identity with impact.</p>
+                        <a href="graphicdesign.html#graphic-design" class="btn btn-outline-info mt-3">Explore</a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Game Development -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
-                    <i class="fas fa-vr-cardboard fa-3x mb-3 text-danger"></i>
-                    <h4 class="mb-2">Game Development</h4>
-                    <p>Slabbion brings creativity and technical precision to the gaming world.</p>
-                    <a href="gamedevelopment.html#game-development" class="btn btn-outline-danger mt-3">Explore</a>
+                    <!-- Game Development -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-vr-cardboard fa-3x mb-3 text-danger"></i>
+                        <h4 class="mb-2">Game Development</h4>
+                        <p>Slabbion brings creativity and technical precision to the gaming world.</p>
+                        <a href="gamedevelopment.html#game-development" class="btn btn-outline-danger mt-3">Explore</a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- MegaXGnome AI Agents -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
-                    <i class="fas fa-robot fa-3x mb-3 text-warning glow-icon"></i>
-                    <h4 class="mb-2 text-warning">MegaXGnome AI Agents</h4>
-                    <p>
-                        The MegaXGnome Framework is the core infrastructure powering our AI agents — a modular, orchestrated system designed for speed, autonomy, and real-time adaptability across custom digital ecosystems.
-                    </p>
-                    <a href="agents.html#agents" class="btn btn-outline-warning mt-3">
-                        Meet the Agents
-                    </a>
+                    <!-- MegaXGnome AI Agents -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-robot fa-3x mb-3 text-warning glow-icon"></i>
+                        <h4 class="mb-2 text-warning">MegaXGnome AI Agents</h4>
+                        <p>
+                            The MegaXGnome Framework is the core infrastructure powering our AI agents — a modular, orchestrated system designed for speed, autonomy, and real-time adaptability across custom digital ecosystems.
+                        </p>
+                        <a href="agents.html#agents" class="btn btn-outline-warning mt-3">
+                            Meet the Agents
+                        </a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Architecture -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
-                    <i class="fas fa-drafting-compass fa-3x mb-3" style="color: #228B22;"></i>
-                    <h4 class="mb-2">Architecture</h4>
-                    <p>Energy Efficient Homes. Designing future-forward smart homes with solar integration, automation, and sustainable living at the core.</p>
-                    <a href="architecture.html#architecture" class="btn btn-outline-forest mt-3">Discover</a>
+                    <!-- Architecture -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-drafting-compass fa-3x mb-3" style="color: #228B22;"></i>
+                        <h4 class="mb-2">Architecture</h4>
+                        <p>Energy Efficient Homes. Designing future-forward smart homes with solar integration, automation, and sustainable living at the core.</p>
+                        <a href="architecture.html#architecture" class="btn btn-outline-forest mt-3">Discover</a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Drones -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
-                    <i class="fas fa-helicopter fa-3x mb-3" style="color: #6f42c1;"></i>
-                    <h4 class="mb-2">Drones</h4>
-                    <p>Explore Slabbion's titanium drone (SL Series) army: SL-01 to SL-07—each built for purpose, precision, and power.</p>
-                    <a href="drones.html#sl-series" class="btn btn-outline-violet mt-3">View Models</a>
+                    <!-- Drones -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-helicopter fa-3x mb-3" style="color: #6f42c1;"></i>
+                        <h4 class="mb-2">Drones</h4>
+                        <p>Explore Slabbion's titanium drone (SL Series) army: SL-01 to SL-07—each built for purpose, precision, and power.</p>
+                        <a href="drones.html#sl-series" class="btn btn-outline-violet mt-3">View Models</a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Vehicles -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
-                    <i class="fas fa-car fa-3x mb-3" style="color: #e67e22;"></i>
-                    <h4 class="mb-2">Vehicles</h4>
-                    <p>Cars, Dune Buggies & Bikes. High-performance custom builds engineered for speed, control, and off-road adventure—Slabbion machines deliver on every terrain.</p>
-                    <a href="vehicles.html#vehicles" class="btn btn-outline-orange mt-3">View Builds</a>
+                    <!-- Vehicles -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-car fa-3x mb-3" style="color: #e67e22;"></i>
+                        <h4 class="mb-2">Vehicles</h4>
+                        <p>Cars, Dune Buggies & Bikes. High-performance custom builds engineered for speed, control, and off-road adventure—Slabbion machines deliver on every terrain.</p>
+                        <a href="vehicles.html#vehicles" class="btn btn-outline-orange mt-3">View Builds</a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Body Armor -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
-                    <i class="fas fa-user-shield fa-3x mb-3" style="color: #b30000;"></i>
-                    <h4 class="mb-2">Body Armor</h4>
-                    <p>Slabbion’s body armor blends tactical strength with future-ready materials—designed for resilience, mobility, and innovation in the field.</p>
-                    <a href="armor.html#body-armor" class="btn btn-outline-deepred mt-3">Explore Gear</a>
+                    <!-- Body Armor -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-user-shield fa-3x mb-3" style="color: #b30000;"></i>
+                        <h4 class="mb-2">Body Armor</h4>
+                        <p>Slabbion’s body armor blends tactical strength with future-ready materials—designed for resilience, mobility, and innovation in the field.</p>
+                        <a href="armor.html#body-armor" class="btn btn-outline-deepred mt-3">Explore Gear</a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Custom Solutions -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
-                    <i class="fas fa-cogs fa-3x mb-3 text-warning"></i>
-                    <h4 class="mb-2">Custom AI & Agents</h4>
-                    <p>Beyond software—Slabbion crafts intelligent agents and tailored digital minds to serve unique missions.</p>
-                    <a href="customsolutions.html#ai-agents" class="btn btn-outline-warning mt-3">Explore</a>
+                    <!-- Custom Solutions -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-cogs fa-3x mb-3 text-warning"></i>
+                        <h4 class="mb-2">Custom AI & Agents</h4>
+                        <p>Beyond software—Slabbion crafts intelligent agents and tailored digital minds to serve unique missions.</p>
+                        <a href="customsolutions.html#ai-agents" class="btn btn-outline-warning mt-3">Explore</a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Join Our Team -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
-                    <i class="fas fa-user-friends fa-3x mb-3 text-secondary"></i>
-                    <h4 class="mb-2">Partner With Slabbion</h4>
-                    <p>We're always on the lookout for talented collaborators and creatives. Let’s build something amazing together.</p>
-                    <a href="contact.html#contact" class="btn btn-outline-secondary mt-3">Apply Now</a>
+                    <!-- Join Our Team -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="feature-box text-center h-100 p-4 border rounded shadow-sm">
+                        <i class="fas fa-user-friends fa-3x mb-3 text-secondary"></i>
+                        <h4 class="mb-2">Partner With Slabbion</h4>
+                        <p>We're always on the lookout for talented collaborators and creatives. Let’s build something amazing together.</p>
+                        <a href="contact.html#contact" class="btn btn-outline-secondary mt-3">Apply Now</a>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <!-- IMAGE SCROLLER -->
-    <section id="image-scroller">
-        <!-- CAROUSEL SCROLLER -->
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            
-            <!-- CAROUSEL INDICATORS -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Web Development Slide"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Social Media Management Slide"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Graphic Design Slide"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Game Development Slide"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Drones Slide"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Architecture Slide"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Armor Slide"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Vehicles Slide"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Custom Solutions Slide"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9" aria-label="Partner With Slabbion Slide"></button>
-            </div>
-
-            <!-- CAROUSEL SLIDES -->
-            <div class="carousel-inner">
+        <!-- IMAGE SCROLLER -->
+        <section id="image-scroller">
+            <!-- CAROUSEL SCROLLER -->
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 
-                <!-- Web Development Slide -->
-                <div class="carousel-item active">
-                    <img src="images/WebDev_Logo_2500x500px.png" class="d-block w-100" alt="Web Development Service">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Web Development</h5>
-                        <p>We build fast, scalable, and beautifully crafted websites that elevate your digital footprint.</p>
-                    </div>
+                <!-- CAROUSEL INDICATORS -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Web Development Slide"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Social Media Management Slide"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Graphic Design Slide"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Game Development Slide"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Drones Slide"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Architecture Slide"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Armor Slide"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Vehicles Slide"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Custom Solutions Slide"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9" aria-label="Partner With Slabbion Slide"></button>
                 </div>
 
-                <!-- Social Media Management Slide -->
-                <div class="carousel-item">
-                    <img src="images/SocialMedia_Logo_2500x500px.png" class="d-block w-100" alt="Social Media Management Service">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Social Media Management</h5>
-                        <p>Reach your ideal audience with engaging content and consistent branding across all platforms.</p>
+                <!-- CAROUSEL SLIDES -->
+                <div class="carousel-inner">
+                    
+                    <!-- Web Development Slide -->
+                    <div class="carousel-item active">
+                        <img src="images/WebDev_Logo_2500x500px.png" class="d-block w-100" alt="Web Development Service">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Web Development</h5>
+                            <p>We build fast, scalable, and beautifully crafted websites that elevate your digital footprint.</p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Graphic Design Slide -->
-                <div class="carousel-item">
-                    <img src="images/GraphicDesign_Logo_2500x500px.png" class="d-block w-100" alt="Graphic Design Service">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Graphic Design</h5>
-                        <p>From logos to full brand systems — we craft visuals that speak your brand’s truth with style.</p>
+                    <!-- Social Media Management Slide -->
+                    <div class="carousel-item">
+                        <img src="images/SocialMedia_Logo_2500x500px.png" class="d-block w-100" alt="Social Media Management Service">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Social Media Management</h5>
+                            <p>Reach your ideal audience with engaging content and consistent branding across all platforms.</p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Game Development Slide -->
-                <div class="carousel-item">
-                    <img src="images/GameDevelopment_Logo_2500x500px.png" class="d-block w-100" alt="Game Development Service">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Game Development</h5>
-                        <p>Whether indie or AAA-inspired, we create game experiences that captivate, challenge, and inspire.</p>
+                    <!-- Graphic Design Slide -->
+                    <div class="carousel-item">
+                        <img src="images/GraphicDesign_Logo_2500x500px.png" class="d-block w-100" alt="Graphic Design Service">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Graphic Design</h5>
+                            <p>From logos to full brand systems — we craft visuals that speak your brand’s truth with style.</p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Drones Slide -->
-                <div class="carousel-item">
-                    <img src="images/Drones_Logo_2500x500px.png" class="d-block w-100" alt="Drones Service">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>SL Series Drones</h5>
-                        <p>Autonomous flight. Real-time intelligence. Built for surveillance, pursuit, and tactical deployment.</p>
+                    <!-- Game Development Slide -->
+                    <div class="carousel-item">
+                        <img src="images/GameDevelopment_Logo_2500x500px.png" class="d-block w-100" alt="Game Development Service">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Game Development</h5>
+                            <p>Whether indie or AAA-inspired, we create game experiences that captivate, challenge, and inspire.</p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Architecture Slide -->
-                <div class="carousel-item">
-                    <img src="images/Architecture_Logo_2500x500px.png" class="d-block w-100" alt="Architecture Service">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Eco-Tech Architecture</h5>
-                        <p>Resilient, green, and modular structures engineered for tomorrow’s world and beyond.</p>
+                    <!-- Drones Slide -->
+                    <div class="carousel-item">
+                        <img src="images/Drones_Logo_2500x500px.png" class="d-block w-100" alt="Drones Service">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>SL Series Drones</h5>
+                            <p>Autonomous flight. Real-time intelligence. Built for surveillance, pursuit, and tactical deployment.</p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Vehicles Slide -->
-                <div class="carousel-item">
-                    <img src="images/Vehicles_Logo_2500x500px.png" class="d-block w-100" alt="Vehicles Service">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Custom Combat Vehicles</h5>
-                        <p>From wasteland buggies to high-tech street beasts — built for performance and survival.</p>
+                    <!-- Architecture Slide -->
+                    <div class="carousel-item">
+                        <img src="images/Architecture_Logo_2500x500px.png" class="d-block w-100" alt="Architecture Service">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Eco-Tech Architecture</h5>
+                            <p>Resilient, green, and modular structures engineered for tomorrow’s world and beyond.</p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Body Armor Slide -->
-                <div class="carousel-item">
-                    <img src="images/Armor_Logo_2500x500px.png" class="d-block w-100" alt="Body Armor Service">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Body Armor</h5>
-                        <p>Advanced protection systems designed for mobility, resilience, and tactical superiority.</p>
+                    <!-- Vehicles Slide -->
+                    <div class="carousel-item">
+                        <img src="images/Vehicles_Logo_2500x500px.png" class="d-block w-100" alt="Vehicles Service">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Custom Combat Vehicles</h5>
+                            <p>From wasteland buggies to high-tech street beasts — built for performance and survival.</p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Custom Solutions Slide -->
-                <div class="carousel-item">
-                    <img src="images/CustomSolutions_Logo_2500x500px.png" class="d-block w-100" alt="Custom Solutions Service">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Custom Solutions</h5>
-                        <p>Have a bold idea? From apps to automations — we design and build digital tools that work for you.</p>
+                    <!-- Body Armor Slide -->
+                    <div class="carousel-item">
+                        <img src="images/Armor_Logo_2500x500px.png" class="d-block w-100" alt="Body Armor Service">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Body Armor</h5>
+                            <p>Advanced protection systems designed for mobility, resilience, and tactical superiority.</p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Partner With Us Slide -->
-                <div class="carousel-item">
-                    <img src="images/ContactUs_Logo_2500x500px.png" class="d-block w-100" alt="Partner With Slabbion">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Partner With Slabbion</h5>
-                        <p>Join forces with a team that values excellence, creativity, and long-term impact.</p>
+                    <!-- Custom Solutions Slide -->
+                    <div class="carousel-item">
+                        <img src="images/CustomSolutions_Logo_2500x500px.png" class="d-block w-100" alt="Custom Solutions Service">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Custom Solutions</h5>
+                            <p>Have a bold idea? From apps to automations — we design and build digital tools that work for you.</p>
+                        </div>
+                    </div>
+
+                    <!-- Partner With Us Slide -->
+                    <div class="carousel-item">
+                        <img src="images/ContactUs_Logo_2500x500px.png" class="d-block w-100" alt="Partner With Slabbion">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Partner With Slabbion</h5>
+                            <p>Join forces with a team that values excellence, creativity, and long-term impact.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Why Slabbion -->
-    <section id="services" class="py-5 text-white bg-black">
-        <div class="container">
-            <h2 class="mb-5 text-center section-title glow-blue">💡 Why Choose Slabbion?</h2>
-            <div class="row text-center g-4 justify-content-center">
+        <!-- Why Slabbion -->
+        <section id="services" class="py-5 text-white bg-black">
+            <div class="container">
+                <h2 class="mb-5 text-center section-title glow-blue">💡 Why Choose Slabbion?</h2>
+                <div class="row text-center g-4 justify-content-center">
 
-                <!-- Innovation -->
-                <div class="col-md-6 col-lg-4 col-xl-2">
-                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
-                        <i class="fas fa-brain fa-2x mb-3 text-secondary glow-icon"></i>
-                        <h5 class="fw-bold">Innovation-Driven</h5>
-                        <p>Creative solutions, not cookie-cutter builds.</p>
+                    <!-- Innovation -->
+                    <div class="col-md-6 col-lg-4 col-xl-2">
+                        <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                            <i class="fas fa-brain fa-2x mb-3 text-secondary glow-icon"></i>
+                            <h5 class="fw-bold">Innovation-Driven</h5>
+                            <p>Creative solutions, not cookie-cutter builds.</p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Security -->
-                <div class="col-md-6 col-lg-4 col-xl-2">
-                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
-                        <i class="fas fa-user-shield fa-2x mb-3 text-light glow-icon"></i>
-                        <h5 class="fw-bold">Security Obsessed</h5>
-                        <p>Encryption, audits, and secure-by-default systems.</p>
+                    <!-- Security -->
+                    <div class="col-md-6 col-lg-4 col-xl-2">
+                        <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                            <i class="fas fa-user-shield fa-2x mb-3 text-light glow-icon"></i>
+                            <h5 class="fw-bold">Security Obsessed</h5>
+                            <p>Encryption, audits, and secure-by-default systems.</p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Client Focus -->
-                <div class="col-md-6 col-lg-4 col-xl-2">
-                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
-                        <i class="fas fa-thumbs-up fa-2x mb-3 text-success glow-icon"></i>
-                        <h5 class="fw-bold">Client-First</h5>
-                        <p>You lead, we enhance. Collaboration is core.</p>
+                    <!-- Client Focus -->
+                    <div class="col-md-6 col-lg-4 col-xl-2">
+                        <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                            <i class="fas fa-thumbs-up fa-2x mb-3 text-success glow-icon"></i>
+                            <h5 class="fw-bold">Client-First</h5>
+                            <p>You lead, we enhance. Collaboration is core.</p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Speed -->
-                <div class="col-md-6 col-lg-4 col-xl-2">
-                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
-                        <i class="fas fa-stopwatch fa-2x mb-3 text-warning glow-icon"></i>
-                        <h5 class="fw-bold">Lightning Fast</h5>
-                        <p>Speed in delivery, speed in product. Period.</p>
+                    <!-- Speed -->
+                    <div class="col-md-6 col-lg-4 col-xl-2">
+                        <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                            <i class="fas fa-stopwatch fa-2x mb-3 text-warning glow-icon"></i>
+                            <h5 class="fw-bold">Lightning Fast</h5>
+                            <p>Speed in delivery, speed in product. Period.</p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Full Stack -->
-                <div class="col-md-6 col-lg-4 col-xl-2">
-                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
-                        <i class="fas fa-layer-group fa-2x mb-3 text-info glow-icon"></i>
-                        <h5 class="fw-bold">Full-Stack Experts</h5>
-                        <p>From design to DevOps — no outsourcing here.</p>
+                    <!-- Full Stack -->
+                    <div class="col-md-6 col-lg-4 col-xl-2">
+                        <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                            <i class="fas fa-layer-group fa-2x mb-3 text-info glow-icon"></i>
+                            <h5 class="fw-bold">Full-Stack Experts</h5>
+                            <p>From design to DevOps — no outsourcing here.</p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Results -->
-                <div class="col-md-6 col-lg-4 col-xl-2">
-                    <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
-                        <i class="fas fa-chart-line fa-2x mb-3 text-danger glow-icon"></i>
-                        <h5 class="fw-bold">Results You Can Measure</h5>
-                        <p>Analytics, KPIs, and ROI baked in from day one.</p>
+                    <!-- Results -->
+                    <div class="col-md-6 col-lg-4 col-xl-2">
+                        <div class="feature-box h-100 p-4 border rounded shadow-sm bg-gradient bg-opacity-10">
+                            <i class="fas fa-chart-line fa-2x mb-3 text-danger glow-icon"></i>
+                            <h5 class="fw-bold">Results You Can Measure</h5>
+                            <p>Analytics, KPIs, and ROI baked in from day one.</p>
+                        </div>
                     </div>
-                </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-4 text-center footer-glow">
-        <div class="container">
-            <p>“Whatever you do, do it for the glory of God.” — <em>1 Corinthians 10:31</em></p>
-        </div>
-    </footer>
-
-
-    <!-- Footer -->
-    <footer class="bg-dark footer-glow text-light text-center py-4">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Developer Credit -->
-                <div class="col-md-6 mb-3 mb-md-0">
-                    <p class="mb-0">Crafted with excellence by <strong class="glow-blue">Niël Slabbert</strong></p>
-                </div>
-
-                <!-- Social Buttons -->
-                <div class="col-md-6">
-                    <div class="social-icons d-flex justify-content-center gap-3">
-                        <a href="https://www.facebook.com/slabbion" target="_blank"><i class="fab fa-facebook-f glow-blue"></i></a>
-                        <a href="https://x.com/slabbion" target="_blank"><i class="fab fa-x-twitter glow-blue"></i></a>
-                        <a href="https://www.instagram.com/slabbion" target="_blank"><i class="fab fa-instagram glow-blue"></i></a>
-                        <a href="https://www.tiktok.com/@slabbion" target="_blank"><i class="fab fa-tiktok glow-blue"></i></a>
-                        <a href="https://www.youtube.com/@slabbion" target="_blank"><i class="fab fa-youtube glow-blue"></i></a>
-                        <a href="https://www.linkedin.com/company/slabbion" target="_blank"><i class="fab fa-linkedin-in glow-blue"></i></a>
-                    </div>
-                    <p class="mt-3 mb-0">&copy; 2025 <span class="glow-blue">Slabbion</span> — Web, Social & Design. All rights reserved.</p>
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-4 text-center footer-glow">
+            <div class="container">
+                <p>“Whatever you do, do it for the glory of God.” — <em>1 Corinthians 10:31</em></p>
+            </div>
+        </footer>
+
+
+        <!-- Footer -->
+        <footer class="bg-dark footer-glow text-light text-center py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Developer Credit -->
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <p class="mb-0">Crafted with excellence by <strong class="glow-blue">Niël Slabbert</strong></p>
+                    </div>
+
+                    <!-- Social Buttons -->
+                    <div class="col-md-6">
+                        <div class="social-icons d-flex justify-content-center gap-3">
+                            <a href="https://www.facebook.com/slabbion" target="_blank"><i class="fab fa-facebook-f glow-blue"></i></a>
+                            <a href="https://x.com/slabbion" target="_blank"><i class="fab fa-x-twitter glow-blue"></i></a>
+                            <a href="https://www.instagram.com/slabbion" target="_blank"><i class="fab fa-instagram glow-blue"></i></a>
+                            <a href="https://www.tiktok.com/@slabbion" target="_blank"><i class="fab fa-tiktok glow-blue"></i></a>
+                            <a href="https://www.youtube.com/@slabbion" target="_blank"><i class="fab fa-youtube glow-blue"></i></a>
+                            <a href="https://www.linkedin.com/company/slabbion" target="_blank"><i class="fab fa-linkedin-in glow-blue"></i></a>
+                        </div>
+                        <p class="mt-3 mb-0">&copy; 2025 <span class="glow-blue">Slabbion</span> — Web, Social & Design. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Optional: Startup Sound -->
+    <audio id="start-sound" src="audio/startup.mp3" preload="auto"></audio>
+
+    <!-- Floating Button -->
+    <button class="zenith-float-button glow-blue" onclick="alert('🧠 Zenith Protocol Coming Soon...')">
+          🧠 
+    </button>
+
+
+    
 
 
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<!-- Loading Screen JS -->
+<script>
+  window.onload = () => {
+    const loadText = document.getElementById('load-text');
+    const subText = document.getElementById('load-subtext');
+    const mainContent = document.getElementById('main-content');
+    const loadingScreen = document.getElementById('loading-screen');
+    const audio = document.getElementById('start-sound');
+
+    // Simulate typing + audio
+    setTimeout(() => {
+      loadText.textContent = "Activating MegaXGnome Framework...";
+      subText.textContent = "Slabbion OS v1.0 - Loading Interfaces...";
+      audio?.play().catch(() => {}); // Autoplay might be blocked
+    }, 1800);
+
+    setTimeout(() => {
+      loadText.textContent = "Launching Zenith Protocol...";
+      subText.textContent = "Interface ready. Welcome to Slabbion.";
+    }, 3400);
+
+    // Finish loading sequence
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+      mainContent.style.display = 'block';
+    }, 5200);
+  };
+</script>
 
 <!-- Theme Toggle Script -->
 <script>
