@@ -330,5 +330,14 @@ startButton.onclick = () => {
     video1.play();
 };
 
+// ========== 📝 Before Video Starts Playing: Hover Sound =========
+const hoverSound = document.getElementById("hover-sound");
+
+startButton.addEventListener("mouseenter", () => {
+    hoverSound.currentTime = 0;
+    hoverSound.play().catch(err => {
+        console.warn("Hover sound blocked:", err);
+    });
+});
 
 

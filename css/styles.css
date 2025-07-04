@@ -824,8 +824,29 @@ body.glass-bg {
   color: #b57cff;
 }
 
-/* Video Intro */
-/* 🎯 Hex Button Overlay */
+/* ================================
+   🎥 Video Intro Overlay Section
+================================= */
+#video-intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+
+#video-intro video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ================================
+   🎯 Start Button Overlay
+================================= */
 #start-button-overlay {
     position: fixed;
     z-index: 99999;
@@ -840,7 +861,22 @@ body.glass-bg {
     animation: fadeInOverlay 1s ease-in-out forwards;
 }
 
-/* ✨ Hexagon Style with Unique Glow */
+/* Fade-in effect for overlay background */
+@keyframes fadeInOverlay {
+    0% {
+        opacity: 0;
+        background-color: black;
+    }
+    100% {
+        opacity: 1;
+        background-color: #0a001a;
+    }
+}
+
+
+/* ================================
+   ✨ Hexagon Start Button
+================================= */
 #start-button {
     position: relative;
     width: 180px;
@@ -863,65 +899,103 @@ body.glass-bg {
     text-shadow: 0 0 10px #fff, 0 0 30px #9b5de5;
     border: 2px solid #8e2de2;
     cursor: pointer;
-    box-shadow: 0 0 30px #8e2de2, inset 0 0 10px #9b5de5;
+    box-shadow: 0 0 30px #5e17eb, inset 0 0 10px #9b5de5;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: hexagonPulse 4s infinite ease-in-out;
+    overflow: visible;
 }
 
-/* Hover Effect */
+
+/* 🌀 Hover Pulse + Glow + Hue Rotate + Shockwave Trigger */
 #start-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 40px #9b5de5, inset 0 0 20px #c77dff;
+    animation: hexagonPulse 1.5s infinite ease-in-out;
+    transform: scale(1.1) rotate(5deg);
+    filter: hue-rotate(15deg);
 }
 
-/* 🟣 Slabbion Unique Glow Animation */
+/* Add a shockwave burst when hovering */
+#start-button:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(80,140,255,0.25) 10%, transparent 70%);
+    border-radius: 50%;
+    transform: scale(1);
+    animation: shockwave 1s ease-out infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* ================================
+   🟣 Slabbion Custom Animations
+================================= */
+
+/* Glowing Animation */
 .slabbion-glow {
     animation: slabbionGlow 2s infinite alternate;
 }
 
 @keyframes slabbionGlow {
     from {
-        box-shadow: 0 0 15px #5e17eb, 0 0 25px #5e17eb;
+        box-shadow: 0 0 20px #5e17eb, 0 0 35px #5e17eb;
     }
     to {
-        box-shadow: 0 0 35px #8e2de2, 0 0 60px #8e2de2;
+        box-shadow: 0 0 45px #4a00e0, 0 0 75px #3f87ff;
     }
 }
 
-/* Optional background fade */
-@keyframes fadeInOverlay {
+
+/* 💥 Hexagon Pulse Animation (no pinks) */
+@keyframes hexagonPulse {
     0% {
-        opacity: 0;
-        background-color: black;
+        transform: scale(1) rotate(0deg);
+        box-shadow: 0 0 30px #4f00d0, inset 0 0 10px #6e55ff;
+    }
+    25% {
+        transform: scale(1.05) rotate(3deg);
+        box-shadow: 0 0 40px #5e17eb, inset 0 0 20px #7285ff;
+    }
+    50% {
+        transform: scale(1) rotate(0deg);
+        box-shadow: 0 0 65px #0070ff, inset 0 0 15px #517fff;
+    }
+    75% {
+        transform: scale(1.08) rotate(-3deg);
+        box-shadow: 0 0 50px #5e17eb, inset 0 0 30px #4467ff;
     }
     100% {
-        opacity: 1;
-        background-color: #0a001a;
+        transform: scale(1) rotate(0deg);
+        box-shadow: 0 0 30px #5e17eb, inset 0 0 10px #6f75ff;
     }
 }
 
-/* Logo inside the hex button */
+
+/* ⚡ Shockwave Animation */
+@keyframes shockwave {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(2.2);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+
+/* ================================
+   🖼️ Logo Inside the Hex Button
+================================= */
 #start-button .slabbion-logo-inside {
     width: 70%;
     height: 70%;
     object-fit: contain;
-    filter: drop-shadow(0 0 8px #c77dff);
+    filter: drop-shadow(0 0 8px #6e80ff);
     pointer-events: none;
-}
-
-
-/* Video Intro */
-#video-intro {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    width: 100vw;
-    height: 100vh;
-    background: black;
-}
-
-#video-intro video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
