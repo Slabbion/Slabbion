@@ -61,6 +61,16 @@
 
     <!-- Video Intro Overlay -->
     <div id="video-intro" style="display: none;">
+
+        <!-- Video Activate -->
+        <div id="start-button-overlay">
+            <button id="start-button" class="slabbion-glow">
+                <img src="images/SlabbionLogo.png" alt="Slabbion Logo" class="slabbion-logo-inside">
+            </button>
+        </div>
+
+        
+        <!-- Intro Video -->
         <video id="intro-video"
             autoplay
             muted
@@ -69,11 +79,11 @@
             disablePictureInPicture
             controlslist="nodownload nofullscreen noremoteplay"
             style="pointer-events: none; width: 100%; height: 100%; object-fit: cover;">
-            <source src="images/intro.mp4" type="video/mp4">
+            <source src="images/Slabbion_Intro.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        
     </div>
-
 
 
     <!-- Main Website Content -->
@@ -363,8 +373,8 @@
             </div>
         </section>
 
-
-
+        <!-- Optional: Startup Sound -->
+            <audio id="start-sound" src="images/Slabbion Web Intro.mp3" preload="auto"></audio>
 
         <!-- Services Section -->
         <section id="services" class="py-5">
@@ -703,8 +713,7 @@
         </footer>
     </div>
 
-    <!-- Optional: Startup Sound -->
-    <audio id="start-sound" src="audio/startup.mp3" preload="auto"></audio>
+    
 
     <!-- Floating Button -->
     <button class="zenith-float-button glow-blue" onclick="alert('🧠 Zenith Protocol Coming Soon...')">
@@ -729,7 +738,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const videoIntro = document.getElementById("video-intro");
     const introVideo = document.getElementById("intro-video");
     const mainContent = document.getElementById("main-content");
-    const audio = document.getElementById('start-sound');
+    const startOverlay = document.getElementById("start-button-overlay");
+    const startButton = document.getElementById("start-button");
+    const audio = document.getElementById("start-sound");
 
     let width = 0;
     const interval = setInterval(() => {
@@ -739,26 +750,12 @@ document.addEventListener("DOMContentLoaded", function () {
             // Hide loading screen
             loadingScreen.style.display = "none";
 
-            // Show and play the intro video
+            // Show video screen with button
             videoIntro.style.display = "block";
-            introVideo.play().catch((err) => {
-                console.error("Autoplay failed:", err);
-                // fallback: directly show main content if autoplay fails
-                videoIntro.style.display = "none";
-                mainContent.style.display = "block";
-            });
-
-            // When video ends, show main content
-            introVideo.onended = () => {
-                videoIntro.style.display = "none";
-                mainContent.style.display = "block";
-            };
-
         } else {
             width++;
             progressBar.style.width = width + "%";
 
-            // Inject staged text/audio during load
             if (width === 30) {
                 loadText.textContent = "Activating MegaXGnome Framework...";
                 subText.textContent = "Slabbion OS v1.0 - Loading Interfaces...";
@@ -770,9 +767,41 @@ document.addEventListener("DOMContentLoaded", function () {
                 subText.textContent = "Interface ready. Welcome to Slabbion.";
             }
         }
-    }, 30); // adjust speed as needed
+    }, 30);
+
+    // 🧠 Handle button click to play video with sound
+    startButton.addEventListener("click", function () {
+        startOverlay.style.display = "none";
+
+        // ✅ Try to unmute and play the video
+        introVideo.muted = false;
+        const playPromise = introVideo.play();
+
+        // Catch autoplay errors
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                // Video is playing!
+            }).catch(error => {
+                console.error("Autoplay failed:", error);
+            });
+        }
+
+        // ✅ After video ends, show main website
+        introVideo.onended = () => {
+        videoIntro.style.display = "none";
+
+        // ✅ Play startup sound
+        const sound = document.getElementById("start-sound");
+        sound.play().catch(err => console.warn("Autoplay blocked:", err));
+
+        // ✅ Show main website content
+        mainContent.style.display = "block";
+        };
+
+    });
 });
 </script>
+
 
 
 

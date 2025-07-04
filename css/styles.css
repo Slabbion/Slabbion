@@ -825,28 +825,91 @@ body.glass-bg {
 }
 
 /* Video Intro */
+/* 🎯 Hex Button Overlay */
 #start-button-overlay {
     position: fixed;
     z-index: 99999;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-    background: black;
+    background: radial-gradient(ellipse at center, #0a001a 0%, #000 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fadeInOverlay 1s ease-in-out forwards;
 }
 
+/* ✨ Hexagon Style with Unique Glow */
 #start-button {
-    font-size: 2rem;
-    padding: 1rem 2rem;
-    border: none;
-    background: #0ff;
-    color: black;
+    position: relative;
+    width: 180px;
+    height: 160px;
+    background: #5e17eb;
+    clip-path: polygon(
+        50% 0%, 
+        93% 25%, 
+        93% 75%, 
+        50% 100%, 
+        7% 75%, 
+        7% 25%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #fff, 0 0 30px #9b5de5;
+    border: 2px solid #8e2de2;
     cursor: pointer;
-    border-radius: 10px;
+    box-shadow: 0 0 30px #8e2de2, inset 0 0 10px #9b5de5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover Effect */
+#start-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px #9b5de5, inset 0 0 20px #c77dff;
+}
+
+/* 🟣 Slabbion Unique Glow Animation */
+.slabbion-glow {
+    animation: slabbionGlow 2s infinite alternate;
+}
+
+@keyframes slabbionGlow {
+    from {
+        box-shadow: 0 0 15px #5e17eb, 0 0 25px #5e17eb;
+    }
+    to {
+        box-shadow: 0 0 35px #8e2de2, 0 0 60px #8e2de2;
+    }
+}
+
+/* Optional background fade */
+@keyframes fadeInOverlay {
+    0% {
+        opacity: 0;
+        background-color: black;
+    }
+    100% {
+        opacity: 1;
+        background-color: #0a001a;
+    }
+}
+
+/* Logo inside the hex button */
+#start-button .slabbion-logo-inside {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px #c77dff);
+    pointer-events: none;
+}
+
+
+/* Video Intro */
 #video-intro {
     position: fixed;
     top: 0;
@@ -862,6 +925,3 @@ body.glass-bg {
     height: 100%;
     object-fit: cover;
 }
-
-
-

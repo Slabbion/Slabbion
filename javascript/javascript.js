@@ -319,4 +319,16 @@ if (fields.customDescription && fields.customDescription.closest('#customSolutio
     }
 }
 
+// ========== 📝 Before Video Starts Playing =========
+const video1 = document.getElementById("intro-video-1");
+const startOverlay = document.getElementById('start-button-overlay');
+const startButton = document.getElementById('start-button');
+
+startButton.onclick = () => {
+    startOverlay.style.display = 'none';
+    video1.muted = false;
+    video1.play();
+};
+
+
 
