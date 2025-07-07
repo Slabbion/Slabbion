@@ -999,3 +999,64 @@ body.glass-bg {
     filter: drop-shadow(0 0 8px #6e80ff);
     pointer-events: none;
 }
+
+/* ================================
+   🖼️ Enhanced Glass Web Dev Package/CTA Buttons
+================================= */
+.btn-glass {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 0 0 transparent;
+}
+
+.btn-glass:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Color Variants */
+.btn-green {
+  color: #31d271;
+  border-color: #31d271;
+}
+
+.btn-green:hover {
+  background-color: rgba(49, 210, 113, 0.1);
+}
+
+.btn-yellow {
+  color: #f0c849;
+  border-color: #f0c849;
+}
+
+.btn-yellow:hover {
+  background-color: rgba(240, 200, 73, 0.1);
+}
+
+.btn-red {
+  color: #f76363;
+  border-color: #f76363;
+}
+
+.btn-red:hover {
+  background-color: rgba(247, 99, 99, 0.1);
+}
+
+.btn-blue {
+  color: #59aaf5;
+  border-color: #59aaf5;
+}
+
+.btn-blue:hover {
+  background-color: rgba(89, 170, 245, 0.1);
+}
